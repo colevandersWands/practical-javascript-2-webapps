@@ -1,0 +1,1668 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Core Concept: Visual Feedback · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-responsive-iframes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dynamic-classes.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://shawnrider.com" target="_blank" class="custom-link">by Shawn Rider</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Welcome to the Book</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites-and-assumptions.html">
+            
+                <a href="../prerequisites-and-assumptions.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Prerequisites and Assumptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">How We Build Web Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../how-we-build/">
+            
+                <a href="../how-we-build/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../how-we-build/core-concept-software-architecture.html">
+            
+                <a href="../how-we-build/core-concept-software-architecture.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Core Concept: Software Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                <a href="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Evolving Approaches to Web Application Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../how-we-build/popular-frontend-frameworks.html">
+            
+                <a href="../how-we-build/popular-frontend-frameworks.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Popular Single Page Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                <a href="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                <a href="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Quiz: How We Build Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Setting Up the Workspace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../setting-up-workspace/">
+            
+                <a href="../setting-up-workspace/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../setting-up-workspace/core-concept-development-environments.html">
+            
+                <a href="../setting-up-workspace/core-concept-development-environments.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Core Concept: Development Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../setting-up-workspace/what-is-nodejs.html">
+            
+                <a href="../setting-up-workspace/what-is-nodejs.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Development Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../setting-up-workspace/installing-nodejs.html">
+            
+                <a href="../setting-up-workspace/installing-nodejs.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Installing Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../setting-up-workspace/installing-git.html">
+            
+                <a href="../setting-up-workspace/installing-git.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    Installing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setting-up-workspace/notes-for-windows-users.html">
+            
+                <a href="../setting-up-workspace/notes-for-windows-users.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    Notes for Windows Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                <a href="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    Quiz: Setting Up the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                <a href="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    Project: Testing the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bootstrapping a New App</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../bootstrap-new-app/">
+            
+                <a href="../bootstrap-new-app/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                <a href="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Core Concept: Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                <a href="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Creating a new Vue.js App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                <a href="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Getting to Know Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                <a href="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Quiz: Bootstrapping a New App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                <a href="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Project: Bootstrap an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging the App</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../debug-app/">
+            
+                <a href="../debug-app/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../debug-app/core-concept-debugging-techniques.html">
+            
+                <a href="../debug-app/core-concept-debugging-techniques.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Core Concept: Debugging Techniques
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../debug-app/using-vue-devtools.html">
+            
+                <a href="../debug-app/using-vue-devtools.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Using Vue Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../debug-app/quiz-debugging-the-app.html">
+            
+                <a href="../debug-app/quiz-debugging-the-app.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    Quiz: Debugging the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../debug-app/project-practice-debugging.html">
+            
+                <a href="../debug-app/project-practice-debugging.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Project: Practice Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploying the App</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../deploy-app/">
+            
+                <a href="../deploy-app/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../deploy-app/core-concept-deployment-tooling.html">
+            
+                <a href="../deploy-app/core-concept-deployment-tooling.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Core Concept: Deployment Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../deploy-app/configuring-deployment.html">
+            
+                <a href="../deploy-app/configuring-deployment.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    Configuring Deployment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../deploy-app/building-and-deploying-the-app.html">
+            
+                <a href="../deploy-app/building-and-deploying-the-app.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Building and Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../deploy-app/quiz-deploying-the-app.html">
+            
+                <a href="../deploy-app/quiz-deploying-the-app.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    Quiz: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../deploy-app/project-deploying-the-app.html">
+            
+                <a href="../deploy-app/project-deploying-the-app.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    Project: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Working with Templates</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../working-with-templates/">
+            
+                <a href="../working-with-templates/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                <a href="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Core Concept: Template Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../working-with-templates/using-data-in-templates.html">
+            
+                <a href="../working-with-templates/using-data-in-templates.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Using Data in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../working-with-templates/conditionals-in-templates.html">
+            
+                <a href="../working-with-templates/conditionals-in-templates.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Conditionals in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../working-with-templates/looping-in-templates.html">
+            
+                <a href="../working-with-templates/looping-in-templates.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Looping in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../working-with-templates/computed-values.html">
+            
+                <a href="../working-with-templates/computed-values.html">
+            
+                    
+                        <b>7.6.</b>
+                    
+                    Computed Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../working-with-templates/quiz-working-with-templates.html">
+            
+                <a href="../working-with-templates/quiz-working-with-templates.html">
+            
+                    
+                        <b>7.7.</b>
+                    
+                    Quiz: Working with Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../working-with-templates/project-templating-data-output.html">
+            
+                <a href="../working-with-templates/project-templating-data-output.html">
+            
+                    
+                        <b>7.8.</b>
+                    
+                    Project: Templating Data Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Handling User Input</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../handling-user-input/">
+            
+                <a href="../handling-user-input/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../handling-user-input/core-concept-user-input.html">
+            
+                <a href="../handling-user-input/core-concept-user-input.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Core Concept: Forms and User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../handling-user-input/using-forms-in-vuejs.html">
+            
+                <a href="../handling-user-input/using-forms-in-vuejs.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Using Forms in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../handling-user-input/handling-events-in-vuejs.html">
+            
+                <a href="../handling-user-input/handling-events-in-vuejs.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    Handling Events in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../handling-user-input/quiz-handling-user-input.html">
+            
+                <a href="../handling-user-input/quiz-handling-user-input.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    Quiz: Handling User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                <a href="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                    
+                        <b>8.6.</b>
+                    
+                    Project: Responding to User Input Part One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Routing and URLs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../routing-urls/">
+            
+                <a href="../routing-urls/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../routing-urls/core-concept-routing-and-urls.html">
+            
+                <a href="../routing-urls/core-concept-routing-and-urls.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Core Concept: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../routing-urls/setting-up-vue-router.html">
+            
+                <a href="../routing-urls/setting-up-vue-router.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    Setting Up vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                <a href="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                    
+                        <b>9.4.</b>
+                    
+                    Creating New Locations in the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../routing-urls/building-navigation.html">
+            
+                <a href="../routing-urls/building-navigation.html">
+            
+                    
+                        <b>9.5.</b>
+                    
+                    Building Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../routing-urls/quiz-routing-and-urls.html">
+            
+                <a href="../routing-urls/quiz-routing-and-urls.html">
+            
+                    
+                        <b>9.6.</b>
+                    
+                    Quiz: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                <a href="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                    
+                        <b>9.7.</b>
+                    
+                    Project: Responding to User Input Part Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using API Data</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../using-api-data/">
+            
+                <a href="../using-api-data/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                <a href="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Core Concept: API Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../using-api-data/exploring-apis.html">
+            
+                <a href="../using-api-data/exploring-apis.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Exploring APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../using-api-data/requesting-data-from-an-api.html">
+            
+                <a href="../using-api-data/requesting-data-from-an-api.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    Requesting Data from an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../using-api-data/quiz-using-api-data.html">
+            
+                <a href="../using-api-data/quiz-using-api-data.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Quiz: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../using-api-data/project-using-api-data.html">
+            
+                <a href="../using-api-data/project-using-api-data.html">
+            
+                    
+                        <b>10.6.</b>
+                    
+                    Project: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Application Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../application-architecture/">
+            
+                <a href="../application-architecture/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                <a href="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                    
+                        <b>11.2.</b>
+                    
+                    Core Concept: Separation of Concerns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../application-architecture/tips-for-refactoring.html">
+            
+                <a href="../application-architecture/tips-for-refactoring.html">
+            
+                    
+                        <b>11.3.</b>
+                    
+                    Tips for Refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../application-architecture/composing-components.html">
+            
+                <a href="../application-architecture/composing-components.html">
+            
+                    
+                        <b>11.4.</b>
+                    
+                    Composing Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                <a href="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                    
+                        <b>11.5.</b>
+                    
+                    Organizing Data and Configuration Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="../application-architecture/quiz-application-architecture.html">
+            
+                <a href="../application-architecture/quiz-application-architecture.html">
+            
+                    
+                        <b>11.6.</b>
+                    
+                    Quiz: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="../application-architecture/project-application-architecture.html">
+            
+                <a href="../application-architecture/project-application-architecture.html">
+            
+                    
+                        <b>11.7.</b>
+                    
+                    Project: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Visual Feedback and Enhancement</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="12.2" data-path="core-concept-visual-feedback.html">
+            
+                <a href="core-concept-visual-feedback.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    Core Concept: Visual Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="dynamic-classes.html">
+            
+                <a href="dynamic-classes.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    Dynamic Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="transitions-and-animations.html">
+            
+                <a href="transitions-and-animations.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    Transitions and Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="messaging.html">
+            
+                <a href="messaging.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    Messaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="quiz-visual-feedback-and-enhancement.html">
+            
+                <a href="quiz-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    Quiz: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="project-visual-feedback-and-enhancement.html">
+            
+                <a href="project-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    Project: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Caching Data</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../caching-data/">
+            
+                <a href="../caching-data/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                <a href="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Core Concept: Methods of Storing Frontend Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../caching-data/saving-user-generated-data.html">
+            
+                <a href="../caching-data/saving-user-generated-data.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Saving User-Generated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../caching-data/caching-data-from-apis.html">
+            
+                <a href="../caching-data/caching-data-from-apis.html">
+            
+                    
+                        <b>13.4.</b>
+                    
+                    Caching Data from APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="../caching-data/quiz-caching-data.html">
+            
+                <a href="../caching-data/quiz-caching-data.html">
+            
+                    
+                        <b>13.5.</b>
+                    
+                    Quiz: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="../caching-data/project-caching-data.html">
+            
+                <a href="../caching-data/project-caching-data.html">
+            
+                    
+                        <b>13.6.</b>
+                    
+                    Project: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../conclusion.html">
+            
+                <a href="../conclusion.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendices</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../appendices/appendix-a-resources.html">
+            
+                <a href="../appendices/appendix-a-resources.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Appendix A: Additional Resources for Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../appendices/appendix-b-api-suggestions.html">
+            
+                <a href="../appendices/appendix-b-api-suggestions.html">
+            
+                    
+                        <b>16.2.</b>
+                    
+                    Appendix B: API Suggestions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Core Concept: Visual Feedback</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="core-concept-visual-feedback">Core Concept: Visual Feedback</h1>
+<p>As a user interacts with our software (website, application, game, etc.), they cause changes to happen in the system. The user might search for a city and then request the weather forecast for that city. They might search for a word and receive a set of data back from a dictionary API. They will undoubtedly interact with whatever features we have built for them, and that will causes changes in the system.</p>
+<p>It might seem obvious to state that those changes are meaningless unless we actually show the results of those changes to the user. If we do not display the weather forecast or list of definitions for a word, then the user will find no value in using our software. So it is obvious that we need to actually show the information, but what is less obvious (especially as we begin our practice as web developers) is how important the visual presentation of that information can be in helping the user both succeed at using our software and enjoy the experience.</p>
+<p>There are many people in the world who aim to write software that people need. In many cases, being the first person to create a software tool has guaranteed a successful project. But as competition increases, as problems become more complex, and as users become more savvy, it takes more than simply performing the task to make a successful software project. It is important to use all of our tools and abilities to increase user engagement and appreciation of the tool, and that is the direct result of building a tool that better serves the user.</p>
+<h2 id="interface-design">Interface Design</h2>
+<p>Providing the user with a pleasurable and useful experience relies on a solid interface design. This should always be the first place we begin to consider the user&apos;s needs and how the software we are building fits into their larger experience (both online and off). It might be that our site will primarily be used by users on mobile devices or tablets. It might be that one portion of the tasks our users want to perform will be completed in the office computer, and another portion of those tasks will be completed on mobile devices. There are myriad possibilities for how our software will fit into lives, processes, and workflows beyond the screen (and another myriad for how it will interact with those same things &quot;within&quot; the screen, too).</p>
+<p>For our purposes here, we will focus primarily on improving the visual feedback of our software through messaging and animation. However, both of those things rely on already having a sensible approach to the interface. And all of these techniques and thoughts go hand-in-hand, so it&apos;s important to do our best to think about them in relation to each other.</p>
+<p>Here are some general tips that will help us make better use of messages and animation in our projects:</p>
+<ul>
+<li>Use proper HTML structures to contain information. Use specific structures where possible (e.g. lists, asides, headers, footers), and respect proper tag nesting and hierarchy rules.</li>
+<li>Organize information into distinct areas contained within parent elements. (This becomes very easy to do if we are building our pages from distinct components, each of which handle one specific set of data or feature.)</li>
+<li>Use &quot;wrapper&quot; elements (e.g. <code>div</code> or <code>span</code>), or use containers like list elements (e.g. <code>ul</code> and <code>ol</code>), to contain information and create a logical hierarchy.</li>
+</ul>
+<h2 id="messaging">Messaging</h2>
+<p>In web applications, being able to let the user know about changes to the system they are using is a critical aspect of designing a responsive, friendly system. In order to communicate changes that may not be possible to represent more clearly to the user through any other means, we often use &quot;messages&quot;. Messages come in many shapes and sizes. The &quot;loading throbber&quot; that we see when loading data in software is a form of message. There are global messages, local messages, and all different styles and conventions of displaying messages. </p>
+<p>Sometimes messages are called &quot;alerts&quot; or &quot;notifications.&quot; Sometimes they are called &quot;toast&quot; or &quot;flash&quot; messages. All of these words indicate a slightly different take on the use and approach to displaying messages. There are many ways to accomplish the goal of explicitly informing our user about the state of the system, and in Vue.js we have many different available methods to approach this problem. Before we get too deep into a specific implementation of messages on our website, let&apos;s consider some general characteristics of how we use messages in software.</p>
+<p>There are many ways to use messaging in websites and apps, and developers are always coming up with clever new ways to indicate changes in content and system status. But a few conventions have grown up around messaging, and it&apos;s worthwhile to be aware of these guiding principles.</p>
+<p>When generally thinking about messaging, the different varieties can be usefully categorized as one of two types: global and local. These are useful labels, and most software makes use of both types of messages at different times. Understanding when to use which type is important for using messages effectively in our application.</p>
+<h3 id="global-messages">Global Messages</h3>
+<p>Global messages apply to everything the user is seeing. On Twitter, for example, as we read tweets in our timeline we may notice an alert that shows up at the top of the timeline telling us that there are a number of new tweets available to read. In many email clients, when we receive a new message, or when ew file a message away, we will see an alert at the top of the screen. </p>
+<p><img src="../img/new_tweets.png" alt="New tweets!">
+<br>New tweets!</p>
+<p>Global messages are great for letting us know that things are happening that generally apply to what we&apos;re doing. Depending on how they are presented, they can be more or less effective. For example, the alert pictured above is only visible when we scroll to the top of the page. If we are lower on the page, we will never know how many tweets you have.</p>
+<h3 id="local-messages">Local Messages</h3>
+<p>Local messages appear closer to &quot;where the action is&quot;. This is commonly seen in form field validation, especially when we&apos;re filling out more complex forms. In order to indicate where we have gone wrong, messages may be shown very close to the field (or in some way even styled as part of the form field).</p>
+<p>Here is an example from Twitter&apos;s signup form:</p>
+<p><img src="../img/twitter_signup.png" alt="Twitter signup with error notifications">
+<br>Twitter signup with error notifications</p>
+<p>As we can see in the image above, as we fill in the form the Twitter website is checking to see if our information is valid. It indicates to us clearly if we have successfully filled in the field or if we must change our information. Twitter even goes so far as to suggest alternate usernames based on the data we&apos;ve filled in when our chosen name is unavailable.</p>
+<p>Local messages are also often used in locations where data is being loaded. We often see loading &quot;throbbers&quot; (those spinning or pulsing animated icons that are used to indicates something is happening) in the location where a specific set of data will be loaded. We see these loading indicators in sidebars where related articles will be listed, and we see them in image or video viewers as the media files are loaded. Since our applications tend more and more to be assembled from small components, each of which might make its own request to a remote API server, these location-based loading messages are likely to remain common.</p>
+<h2 id="meaningful-animations-and-transitions">Meaningful Animations and Transitions</h2>
+<p>One of the side-effects of writing highly performant Javascript applications is that when we change the data on the screen it can be difficult for users to notice the alterations. It&apos;s not at all uncommon when working with an unstyled app for even developers, bleary-eyed from looking closely at code, may miss that a value has changed in a corner of the screen.</p>
+<p>In order to make it more evident that changes are happening on the page, we often turn to animation. Humans are very good at noticing even small movements, especially if everything else on a page is generally stationary. We can animate position, size, color, and shape to help us draw attention to whatever we have changed.</p>
+<p>Animations can help us show that an item has been added to a list, that an item which has been deleted is actively being removed, or that some information requires immediate attention. Animations help regain the feeling of &quot;moving&quot; through a website, which is somewhat lost when we abandon full page refreshes. Although the users appreciate the speediness of single page applications, they also find comfort in the indication that they are moving from one place to another. Transitional animations when replacing content on the screen help us give that feeling back to users.</p>
+<p>By combining all of these techniques, we can create a much more enjoyable and understandable experience for users. We can prevent users from feeling confused about what just happened, and we can avoid the impression that our applications are not working by properly conveying information about loading and errors as needed. The more explicit and clear our applications and sites can be about what is happening in front of the user, the better the user experience will be.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dynamic-classes.html" class="navigation navigation-next " aria-label="Next page: Dynamic Classes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Core Concept: Visual Feedback","level":"12.2","depth":1,"next":{"title":"Dynamic Classes","level":"12.3","depth":1,"path":"visual-feedback/dynamic-classes.md","ref":"visual-feedback/dynamic-classes.md","articles":[]},"previous":{"title":"Introduction","level":"12.1","depth":1,"path":"visual-feedback/README.md","ref":"visual-feedback/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","quiz","youtube","responsive-iframes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"Check my answers","showExplanation":"Explain","showCorrect":"Show all","explanationHeader":"Explanation"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"responsive-iframes":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"by Shawn Rider":"http://shawnrider.com"}},"gitbook":"3.x.x"},"file":{"path":"visual-feedback/core-concept-visual-feedback.md","mtime":"2018-03-10T12:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-10T12:11:19.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-responsive-iframes/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

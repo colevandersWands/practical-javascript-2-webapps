@@ -1,0 +1,2342 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Project: Application Architecture · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-responsive-iframes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../visual-feedback/" />
+    
+    
+    <link rel="prev" href="quiz-application-architecture.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://shawnrider.com" target="_blank" class="custom-link">by Shawn Rider</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Welcome to the Book</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites-and-assumptions.html">
+            
+                <a href="../prerequisites-and-assumptions.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Prerequisites and Assumptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">How We Build Web Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../how-we-build/">
+            
+                <a href="../how-we-build/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../how-we-build/core-concept-software-architecture.html">
+            
+                <a href="../how-we-build/core-concept-software-architecture.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Core Concept: Software Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                <a href="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Evolving Approaches to Web Application Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../how-we-build/popular-frontend-frameworks.html">
+            
+                <a href="../how-we-build/popular-frontend-frameworks.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Popular Single Page Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                <a href="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                <a href="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Quiz: How We Build Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Setting Up the Workspace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../setting-up-workspace/">
+            
+                <a href="../setting-up-workspace/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../setting-up-workspace/core-concept-development-environments.html">
+            
+                <a href="../setting-up-workspace/core-concept-development-environments.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Core Concept: Development Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../setting-up-workspace/what-is-nodejs.html">
+            
+                <a href="../setting-up-workspace/what-is-nodejs.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Development Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../setting-up-workspace/installing-nodejs.html">
+            
+                <a href="../setting-up-workspace/installing-nodejs.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Installing Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../setting-up-workspace/installing-git.html">
+            
+                <a href="../setting-up-workspace/installing-git.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    Installing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setting-up-workspace/notes-for-windows-users.html">
+            
+                <a href="../setting-up-workspace/notes-for-windows-users.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    Notes for Windows Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                <a href="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    Quiz: Setting Up the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                <a href="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    Project: Testing the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bootstrapping a New App</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../bootstrap-new-app/">
+            
+                <a href="../bootstrap-new-app/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                <a href="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Core Concept: Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                <a href="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Creating a new Vue.js App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                <a href="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Getting to Know Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                <a href="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Quiz: Bootstrapping a New App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                <a href="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Project: Bootstrap an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging the App</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../debug-app/">
+            
+                <a href="../debug-app/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../debug-app/core-concept-debugging-techniques.html">
+            
+                <a href="../debug-app/core-concept-debugging-techniques.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Core Concept: Debugging Techniques
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../debug-app/using-vue-devtools.html">
+            
+                <a href="../debug-app/using-vue-devtools.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Using Vue Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../debug-app/quiz-debugging-the-app.html">
+            
+                <a href="../debug-app/quiz-debugging-the-app.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    Quiz: Debugging the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../debug-app/project-practice-debugging.html">
+            
+                <a href="../debug-app/project-practice-debugging.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Project: Practice Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploying the App</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../deploy-app/">
+            
+                <a href="../deploy-app/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../deploy-app/core-concept-deployment-tooling.html">
+            
+                <a href="../deploy-app/core-concept-deployment-tooling.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Core Concept: Deployment Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../deploy-app/configuring-deployment.html">
+            
+                <a href="../deploy-app/configuring-deployment.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    Configuring Deployment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../deploy-app/building-and-deploying-the-app.html">
+            
+                <a href="../deploy-app/building-and-deploying-the-app.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Building and Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../deploy-app/quiz-deploying-the-app.html">
+            
+                <a href="../deploy-app/quiz-deploying-the-app.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    Quiz: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../deploy-app/project-deploying-the-app.html">
+            
+                <a href="../deploy-app/project-deploying-the-app.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    Project: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Working with Templates</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../working-with-templates/">
+            
+                <a href="../working-with-templates/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                <a href="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Core Concept: Template Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../working-with-templates/using-data-in-templates.html">
+            
+                <a href="../working-with-templates/using-data-in-templates.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Using Data in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../working-with-templates/conditionals-in-templates.html">
+            
+                <a href="../working-with-templates/conditionals-in-templates.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Conditionals in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../working-with-templates/looping-in-templates.html">
+            
+                <a href="../working-with-templates/looping-in-templates.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Looping in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../working-with-templates/computed-values.html">
+            
+                <a href="../working-with-templates/computed-values.html">
+            
+                    
+                        <b>7.6.</b>
+                    
+                    Computed Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../working-with-templates/quiz-working-with-templates.html">
+            
+                <a href="../working-with-templates/quiz-working-with-templates.html">
+            
+                    
+                        <b>7.7.</b>
+                    
+                    Quiz: Working with Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../working-with-templates/project-templating-data-output.html">
+            
+                <a href="../working-with-templates/project-templating-data-output.html">
+            
+                    
+                        <b>7.8.</b>
+                    
+                    Project: Templating Data Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Handling User Input</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../handling-user-input/">
+            
+                <a href="../handling-user-input/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../handling-user-input/core-concept-user-input.html">
+            
+                <a href="../handling-user-input/core-concept-user-input.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Core Concept: Forms and User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../handling-user-input/using-forms-in-vuejs.html">
+            
+                <a href="../handling-user-input/using-forms-in-vuejs.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Using Forms in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../handling-user-input/handling-events-in-vuejs.html">
+            
+                <a href="../handling-user-input/handling-events-in-vuejs.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    Handling Events in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../handling-user-input/quiz-handling-user-input.html">
+            
+                <a href="../handling-user-input/quiz-handling-user-input.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    Quiz: Handling User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                <a href="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                    
+                        <b>8.6.</b>
+                    
+                    Project: Responding to User Input Part One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Routing and URLs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../routing-urls/">
+            
+                <a href="../routing-urls/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../routing-urls/core-concept-routing-and-urls.html">
+            
+                <a href="../routing-urls/core-concept-routing-and-urls.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Core Concept: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../routing-urls/setting-up-vue-router.html">
+            
+                <a href="../routing-urls/setting-up-vue-router.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    Setting Up vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                <a href="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                    
+                        <b>9.4.</b>
+                    
+                    Creating New Locations in the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../routing-urls/building-navigation.html">
+            
+                <a href="../routing-urls/building-navigation.html">
+            
+                    
+                        <b>9.5.</b>
+                    
+                    Building Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../routing-urls/quiz-routing-and-urls.html">
+            
+                <a href="../routing-urls/quiz-routing-and-urls.html">
+            
+                    
+                        <b>9.6.</b>
+                    
+                    Quiz: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                <a href="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                    
+                        <b>9.7.</b>
+                    
+                    Project: Responding to User Input Part Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using API Data</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../using-api-data/">
+            
+                <a href="../using-api-data/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                <a href="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Core Concept: API Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../using-api-data/exploring-apis.html">
+            
+                <a href="../using-api-data/exploring-apis.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Exploring APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../using-api-data/requesting-data-from-an-api.html">
+            
+                <a href="../using-api-data/requesting-data-from-an-api.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    Requesting Data from an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../using-api-data/quiz-using-api-data.html">
+            
+                <a href="../using-api-data/quiz-using-api-data.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Quiz: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../using-api-data/project-using-api-data.html">
+            
+                <a href="../using-api-data/project-using-api-data.html">
+            
+                    
+                        <b>10.6.</b>
+                    
+                    Project: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Application Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="core-concept-separation-of-concerns.html">
+            
+                <a href="core-concept-separation-of-concerns.html">
+            
+                    
+                        <b>11.2.</b>
+                    
+                    Core Concept: Separation of Concerns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="tips-for-refactoring.html">
+            
+                <a href="tips-for-refactoring.html">
+            
+                    
+                        <b>11.3.</b>
+                    
+                    Tips for Refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="composing-components.html">
+            
+                <a href="composing-components.html">
+            
+                    
+                        <b>11.4.</b>
+                    
+                    Composing Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="organizing-data-and-configuration-code.html">
+            
+                <a href="organizing-data-and-configuration-code.html">
+            
+                    
+                        <b>11.5.</b>
+                    
+                    Organizing Data and Configuration Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="quiz-application-architecture.html">
+            
+                <a href="quiz-application-architecture.html">
+            
+                    
+                        <b>11.6.</b>
+                    
+                    Quiz: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="11.7" data-path="project-application-architecture.html">
+            
+                <a href="project-application-architecture.html">
+            
+                    
+                        <b>11.7.</b>
+                    
+                    Project: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Visual Feedback and Enhancement</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../visual-feedback/">
+            
+                <a href="../visual-feedback/">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../visual-feedback/core-concept-visual-feedback.html">
+            
+                <a href="../visual-feedback/core-concept-visual-feedback.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    Core Concept: Visual Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../visual-feedback/dynamic-classes.html">
+            
+                <a href="../visual-feedback/dynamic-classes.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    Dynamic Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../visual-feedback/transitions-and-animations.html">
+            
+                <a href="../visual-feedback/transitions-and-animations.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    Transitions and Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="../visual-feedback/messaging.html">
+            
+                <a href="../visual-feedback/messaging.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    Messaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    Quiz: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    Project: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Caching Data</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../caching-data/">
+            
+                <a href="../caching-data/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                <a href="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Core Concept: Methods of Storing Frontend Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../caching-data/saving-user-generated-data.html">
+            
+                <a href="../caching-data/saving-user-generated-data.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Saving User-Generated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../caching-data/caching-data-from-apis.html">
+            
+                <a href="../caching-data/caching-data-from-apis.html">
+            
+                    
+                        <b>13.4.</b>
+                    
+                    Caching Data from APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="../caching-data/quiz-caching-data.html">
+            
+                <a href="../caching-data/quiz-caching-data.html">
+            
+                    
+                        <b>13.5.</b>
+                    
+                    Quiz: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="../caching-data/project-caching-data.html">
+            
+                <a href="../caching-data/project-caching-data.html">
+            
+                    
+                        <b>13.6.</b>
+                    
+                    Project: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../conclusion.html">
+            
+                <a href="../conclusion.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendices</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../appendices/appendix-a-resources.html">
+            
+                <a href="../appendices/appendix-a-resources.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Appendix A: Additional Resources for Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../appendices/appendix-b-api-suggestions.html">
+            
+                <a href="../appendices/appendix-b-api-suggestions.html">
+            
+                    
+                        <b>16.2.</b>
+                    
+                    Appendix B: API Suggestions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Project: Application Architecture</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="project-application-architecture-and-refactoring-practice">Project: Application Architecture and Refactoring Practice</h1>
+<p>The <a href="https://github.com/suwebdev/wats4000-refactoring" target="_blank">Refactoring Practice project repository</a> provides you with a working weather application that can be improved through refactoring. 
+The weather app uses three major views: City Search, Current Weather, and 5 Day Forecast. Users
+can search for their city and then view weather data. The weather data is
+requested from the <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap.org API</a>, which
+is free and available for any developer to use. (<strong>NOTE:</strong> You will need to
+sign up to get an OpenWeatherMap.org API Key to complete this project.)</p>
+<p>In the initial state, this application will work (once you insert your API key
+into the proper locations), but the structure of the application could be
+significantly improved. We will practice creating child components that can
+accept data from the parent component, abstract base API configurations away
+from each individual API call, and consolidate other HTML and CSS blocks to
+minimize the pain of maintenance.</p>
+<h2 id="review-the-requirements">Review the Requirements</h2>
+<p>In order to complete this project, we must fulfill the following Basic Requirements. These requirements are all focused around refactoring the application into a more organized structure that will make future maintenance and improvements easier. Remember that we are <strong>not</strong> trying to improve the performance or add any new features to the project. The goal here is purely around refactoring. The end result should appear to the user exactly like the current version.</p>
+<ul>
+<li>Sign up to <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap.org</a> and generate an API Key.</li>
+<li>Paste your API Key (which will be used as the <code>APPID</code> parameter) into the appropriate locations in the <code>CitySearch.vue</code>, <code>CurrentWeather.vue</code>, and <code>Forecast.vue</code> files.</li>
+<li>Verify the site works with your key. You should be able to search for a city and see weather data.</li>
+<li>Abstract the base configuration for the API requests to a common file to reduce duplication of the base URL and <code>APPID</code>.</li>
+<li>Create child components that can accept weather information and produce a well-formatted display.</li>
+<li>Use the child components in each of the views to eliminate the redundant HTML and CSS styles used.</li>
+<li>Create a child component called <code>ErrorList</code> to handle display of error messages. Replace the error message handling in the templates of the three parent components with this child component.</li>
+<li>Clean up any extraneous code, comments, or files that are unused.</li>
+<li>Add comments where they would be helpful to improve the readability of the project.</li>
+</ul>
+<h2 id="working-the-project">Working the Project</h2>
+<p>In order to get this project working, we should first fork the repository from the main <a href="https://github.com/suwebdev/wats4000-refactoring" target="_blank">Refactoring Practice repository</a>, then we should clone the files to our local development area. We will need to install the project dependencies by running <code>npm install</code> from the project root directory.</p>
+<h3 id="make-an-openweathermaporg-api-key">Make an OpenWeatherMap.org API Key</h3>
+<p>To get the project running, we need to make an account on <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap.org</a> and generate an API key. Once we have created an account, the API Keys can be found under our Account page (<a href="https://home.openweathermap.org/api_keys" target="_blank">located here</a>). Create a new API Key and then open the project repository in a preferred editor. We must find the <code>YOUR_APPID_HERE</code> placeholders in the <code>CitySearch.vue</code>, <code>CurrentWeather.vue</code> and <code>Forecast.vue</code> files and replace those placeholders with our actual API Key (called an <code>APPID</code> by OpenWeatherMap.org).</p>
+<p><img src="../img/project11-home1.png" alt="Working home screen">
+<br>Working home screen</p>
+<p>Once we&apos;ve replaced that information the project should become operational. Run <code>npm run dev</code> and verify that the project works. Once we&apos;ve made sure the project is working, we can begin refactoring.</p>
+<h3 id="abstract-the-base-api-configuration">Abstract the Base API Configuration</h3>
+<p>The first thing we can do to make a major improvement in this application is to consolidate the base configuration for our API into a common module that can be imported into whatever component we need. We can do this using a few basic features available in <code>axios</code>, the module we are using to handle HTTP requests to our API services.</p>
+<p>Let&apos;s start by making a new directory under <code>src/</code> called <code>common/</code>. Then, we will create the file <code>src/common/api.js</code>. Inside that file, we will write the following code:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> API = axios.create({
+  baseURL: <span class="hljs-string">`//api.openweathermap.org/data/2.5/`</span>
+})
+API.interceptors.request.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-comment">// Set common parameters on each request</span>
+    config.params.APPID = <span class="hljs-string">&apos;YOUR_APPID_HERE&apos;</span>;
+    config.params.units = <span class="hljs-string">&apos;imperial&apos;</span>;
+    <span class="hljs-keyword">return</span> config;
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+  });
+</code></pre>
+<p>The code above creates a new <code>const</code> variable called <code>API</code>. The <code>API</code> object is initialized with the <code>axios.create()</code> method, which returns an HTTP request object. We use the <code>export</code> keyword to declare the <code>API</code> value because we want to be able to import the <code>API</code> object wherever we need to use it. Notice that we set the <code>base_url</code> to <code>//api.openweathermap.org/data/2.5/</code>. We have omitted the <code>http:</code>, which is a common technique to allow the browser to fill in whatever the current protocol is. If our site is deployed on an <code>http</code> server, then it will prepend <code>http:</code>; if it is deployed on an <code>https</code> server, then the browser will prepend <code>https:</code>. This way we avoid any security warnings by using <code>http</code> or <code>https</code> at the wrong time.</p>
+<p>After we have created the <code>API</code> object, we set up an <code>interceptor</code> on the base configuration. The <code>interceptor</code> will watch for any request that is made using the <code>API</code> object. For each request it will &quot;intercept&quot; the data before it is sent, and it will add two properties to the <code>params</code> object: <code>APPID</code> and <code>units</code>. Since these values were the same in each request, we can safely include them in this interceptor and we do not need to repeat them in each component where we use the <code>API</code> object.</p>
+<p>Once we have this base configuration in place, we can update our components to make use of the new, leaner API object. We will need to update the API calls in all three of our components. Here is the first update for an example:</p>
+<p><strong><code>CitySearch.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/common/api&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;CitySearch&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      results: <span class="hljs-literal">null</span>,
+      errors: [],
+      query: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  methods: {
+    getCities: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      API.get(<span class="hljs-string">&apos;find&apos;</span>, {
+        params: {
+            q: <span class="hljs-keyword">this</span>.query
+        }
+      })
+      .then(response =&gt; {
+        <span class="hljs-keyword">this</span>.results = response.data
+      })
+      .catch(error =&gt; {
+        <span class="hljs-keyword">this</span>.errors.push(error)
+      });
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Notice that we have updated the import statement to import the <code>API</code> object instead of <code>axios</code> directly. We have simplified the API request in the <code>getCities</code> method, too: it is now several lines shorter. It only needs to provide the unique endpoint (in this case, <code>find</code>) and the unique params (in this case the <code>q</code> param is populated with the user&apos;s <code>query</code> value).</p>
+<p>Once we have made these changes, the component functions just as it did before. We can now make the changes in each of the remaining components and then we are done with the first portion of this refactoring project.</p>
+<h3 id="create-child-components-to-display-weather-information">Create Child Components to Display Weather Information</h3>
+<p>There are two places where it appears we have serious redundancy in our templates. These two locations can be isolated into child components that will accept data from their parent. They do not need to process any data or make any additional API requests, so they should be relatively lean components.</p>
+<h4 id="weather-summary">Weather Summary</h4>
+<p>First, we will break up the <code>weatherSummary</code> section into a child component. We can see that this code is repeated in each of the three main components:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;weatherSummary in city.weather&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;weatherSummary&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">v-bind:src</span>=<span class="hljs-string">&quot;&apos;http://openweathermap.org/img/w/&apos; + weatherSummary.icon + &apos;.png&apos;&quot;</span> <span class="hljs-attr">v-bind:alt</span>=<span class="hljs-string">&quot;weatherSummary.main&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{ weatherSummary.main }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>This summary area of the data is always an array that must be iterated through. It often only has one item in the array, but sometimes it will have more. For each item in the array we want to show the icon and the summary text. We can create a new component called <code>WeatherSummary</code> that will handle this HTML code:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;weatherSummary in weatherData&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;weatherSummary&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">v-bind:src</span>=<span class="hljs-string">&quot;&apos;http://openweathermap.org/img/w/&apos; + weatherSummary.icon + &apos;.png&apos;&quot;</span> <span class="hljs-attr">v-bind:alt</span>=<span class="hljs-string">&quot;weatherSummary.main&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{ weatherSummary.main }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;WeatherSummary&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    weatherData: {}
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.weatherSummary</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>As we can see, this new child component is completely dedicated to displaying these weather summary items. It does not have any terribly complex behavior. It simply expects an array of <code>weatherSummary</code> objects, and it will process those the same way each time. We can now add this component into our main components that control our views. Here is what it looks like when used in the <code>CitySearch</code> component:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    ... template code ...
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;city.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+
+    ... more template code ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/common/api&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherSummary <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherSummary&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;CitySearch&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      results: <span class="hljs-literal">null</span>,
+      errors: [],
+      query: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  methods: {
+    getCities: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      API.get(<span class="hljs-string">&apos;find&apos;</span>, {
+        params: {
+            q: <span class="hljs-keyword">this</span>.query
+        }
+      })
+      .then(response =&gt; {
+        <span class="hljs-keyword">this</span>.results = response.data
+      })
+      .catch(error =&gt; {
+        <span class="hljs-keyword">this</span>.errors.push(error)
+      });
+    }
+  },
+  components: {
+    <span class="hljs-string">&apos;weather-summary&apos;</span>: WeatherSummary
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>In this example, we can see that the <code>&lt;weather-summary&gt;</code> element is used. We have imported the <code>WeatherSummary</code> child component at the top of our component logic, and then we have defined a <code>components</code> object that indicates we will be using the <code>WeatherSummary</code> in our templates. We must use <code>v-bind</code> to pass the value of <code>city.weather</code> to the <code>WeatherSummary</code>, where it comes in as the <code>WeatherData</code> property.</p>
+<p>Now that we have this component in place in the <code>CitySearch</code> component we can test things out and then follow the same process to add the child component to our <code>CurrentWeather</code> and <code>Forecast</code> components. Note that the name of the value we pass to the <code>WeatherSummary</code> component changes in each instance where it is used:</p>
+<p><strong><code>CurrentWeather.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;weatherData.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+</code></pre>
+<p><strong><code>Forecast.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;forecast.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+</code></pre>
+<p>In each case, we pass in the proper <code>weather</code> array that can be processed by the <code>WeatherSummary</code> component.</p>
+<h4 id="weather-data">Weather Data</h4>
+<p>The other portion of the component templates that is repetitive is the weather data display. This structure is repeated almost verbatim in several places:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Humidity<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ forecast.main.humidity }}%<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>High<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ forecast.main.temp_max }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Low<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ forecast.main.temp_min }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</code></pre>
+<p>There are also several style definitions that target this HTML, and those are also duplicated in each component. If we allowed the code to remain so repetitive we would undoubtedly see the gradual evolution of these styles and this markup diverge as small tweaks were made to different components and developers unwittingly reproduced work that had already been done.</p>
+<p>Rather than living with this duplication, we can isolate this display into a single component that can be used whenever we need this structure. Let&apos;s call this component <code>WeatherConditions</code>. Here is a draft of what this component might look like:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;conditions.temp != conditions.temp_min&quot;</span>&gt;</span>Current Temperature<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;conditions.temp != conditions.temp_min&quot;</span>&gt;</span>{{ conditions.temp }}%<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Humidity<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.humidity }}%<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>High<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.temp_max }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Low<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.temp_min }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;WeatherConditions&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    conditions: {}
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-tag">dl</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8e8e8</span>;
+  }
+  <span class="hljs-selector-tag">dt</span> {
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">clear</span>: left;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;
+    <span class="hljs-attribute">text-align</span>: right;
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">color</span>: blue;
+  }
+  <span class="hljs-selector-tag">dd</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">130px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0.5em</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-tag">dt</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;:&quot;</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>This component can be passed the <code>main</code> object from any of our API responses and it will output the properly-formatted weather condition data: humidity, high temp, and low temp. This has removed almost 20 lines of CSS and 8 lines of HTML from each of the other components, and it has isolated this functionality into a single location where we could focus our work if we needed to enhance this output. We can use this child component in our other component templates just like we did with the <code>WeatherSummary</code> component (see the full file text below for an example of how to use this component inside of our other components).</p>
+<h3 id="create-errorlist-child-component">Create <code>ErrorList</code> Child Component</h3>
+<p>Now that we&apos;ve done this twice, separating the errors list out into a child component should be a snap. This component will expect the <code>errors</code> array as a property, and then it will process and display those errors. Again, this child component only needs to receive and display data, so it will not need to implement any custom events.</p>
+<p>To accomplish this refactoring, we need to create a new file for the <code>ErrorList</code> component. This is what it should look like:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;errorList.length &gt; 0&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>There was an error fetching data.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;error in errorList&quot;</span>&gt;</span>{{ error }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;ErrorList&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    errorList: []
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.errors</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">border</span>: solid red <span class="hljs-number">1px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>This new child component can be used in each of our main components and will allow us to eliminate another dozen or so lines of code in each of those main components. It will also consolidate the error listing feature, which allows us to more easily focus on improving that feature when we choose to do so (without risking unnecessary complications in our other components).</p>
+<p>We can implement this new child component using the same patterns we established before. See the example code below for details about how to implement this child component.</p>
+<h3 id="clean-up-extraneous-files">Clean Up Extraneous Files</h3>
+<p>There are several files that appear to be remnants of previous development. Clean up the extra file in the <code>src/components/</code> directory and the extra experimental data file. Take another pass through all of the code files and remove any extraneous <code>TODO</code> comments or other irrelevant comments.</p>
+<h3 id="enhance-comments">Enhance Comments</h3>
+<p>If we haven&apos;t already been conscientious about commenting our changes so developers reviewing our work will be able to tell how things work, then now is the time to go back through and do that work. We must leave comments that allow developers to more quickly understand non-obvious details about the code and how to use it.</p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>Now that we&apos;ve completed the project, here are what each of our files look like in their entirety. We can reference these examples to check our own work.</p>
+<h3 id="components">Components</h3>
+<p><strong><code>CitySearch.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>City Search<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">&quot;getCities&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Enter city name: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;query&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Paris, TX&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cities&quot;</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;results &amp;&amp; results.list.length &gt; 0&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;city in results.list&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{{ city.name }}, {{ city.sys.country }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">v-bind:to</span>=<span class="hljs-string">&quot;{ name: &apos;CurrentWeather&apos;, params: { cityId: city.id } }&quot;</span>&gt;</span>View Current Weather<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;city.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">weather-conditions</span> <span class="hljs-attr">v-bind:conditions</span>=<span class="hljs-string">&quot;city.main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-conditions</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">error-list</span> <span class="hljs-attr">v-bind:errorList</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">error-list</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/common/api&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherSummary <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherSummary&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherConditions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherConditions&apos;</span>;
+<span class="hljs-keyword">import</span> ErrorList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/ErrorList&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;CitySearch&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      results: <span class="hljs-literal">null</span>,
+      errors: [],
+      query: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  methods: {
+    getCities: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      API.get(<span class="hljs-string">&apos;find&apos;</span>, {
+        params: {
+            q: <span class="hljs-keyword">this</span>.query
+        }
+      })
+      .then(response =&gt; {
+        <span class="hljs-keyword">this</span>.results = response.data
+      })
+      .catch(error =&gt; {
+        <span class="hljs-keyword">this</span>.errors.push(error)
+      });
+    }
+  },
+  components: {
+    <span class="hljs-string">&apos;weather-summary&apos;</span>: WeatherSummary,
+    <span class="hljs-string">&apos;weather-conditions&apos;</span>: WeatherConditions,
+    <span class="hljs-string">&apos;error-list&apos;</span>: ErrorList
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#e8e8e8</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span>;
+}
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#42b983</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><strong><code>CurrentWeather.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Current Weather <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;weatherData&quot;</span>&gt;</span> for {{ weatherData.name }}, {{weatherData.sys.country }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span> |
+      <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">v-bind:to</span>=<span class="hljs-string">&quot;{ name: &apos;Forecast&apos;, params: { cityId: $route.params.cityId } }&quot;</span>&gt;</span>View 5-Day Forecast<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;weatherData &amp;&amp; errors.length===0&quot;</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;weatherData.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">weather-conditions</span> <span class="hljs-attr">v-bind:conditions</span>=<span class="hljs-string">&quot;weatherData.main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-conditions</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Loading...<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">error-list</span> <span class="hljs-attr">v-bind:errorList</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">error-list</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/common/api&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherSummary <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherSummary&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherConditions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherConditions&apos;</span>;
+<span class="hljs-keyword">import</span> ErrorList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/ErrorList&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;CurrentWeather&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      weatherData: <span class="hljs-literal">null</span>,
+      errors: [],
+      query: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  created () {
+    API.get(<span class="hljs-string">&apos;weather&apos;</span>, {
+      params: {
+          id: <span class="hljs-keyword">this</span>.$route.params.cityId
+      }
+    })
+    .then(response =&gt; {
+      <span class="hljs-keyword">this</span>.weatherData = response.data
+    })
+    .catch(error =&gt; {
+      <span class="hljs-keyword">this</span>.errors.push(error)
+    });
+  },
+  components: {
+    <span class="hljs-string">&apos;weather-summary&apos;</span>: WeatherSummary,
+    <span class="hljs-string">&apos;weather-conditions&apos;</span>: WeatherConditions,
+    <span class="hljs-string">&apos;error-list&apos;</span>: ErrorList
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#e8e8e8</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+}
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#42b983</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><strong><code>Forecast.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Five Day Hourly Forecast <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;weatherData&quot;</span>&gt;</span> for {{ weatherData.city.name }}, {{weatherData.city.country }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span> |
+      <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">v-bind:to</span>=<span class="hljs-string">&quot;{ name: &apos;CurrentWeather&apos;, params: { cityId: $route.params.cityId } }&quot;</span>&gt;</span>Current Weather <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;weatherData&quot;</span>&gt;</span> for {{ weatherData.city.name }}, {{weatherData.city.country }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;weatherData &amp;&amp; errors.length===0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;forecast&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;forecast in weatherData.list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>{{ forecast.dt|formatDate }}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">weather-summary</span> <span class="hljs-attr">v-bind:weatherData</span>=<span class="hljs-string">&quot;forecast.weather&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-summary</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">weather-conditions</span> <span class="hljs-attr">v-bind:conditions</span>=<span class="hljs-string">&quot;forecast.main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">weather-conditions</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Loading...<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">error-list</span> <span class="hljs-attr">v-bind:errorList</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">error-list</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {API} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/common/api&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherSummary <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherSummary&apos;</span>;
+<span class="hljs-keyword">import</span> WeatherConditions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/WeatherConditions&apos;</span>;
+<span class="hljs-keyword">import</span> ErrorList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@/components/ErrorList&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;Forecast&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      weatherData: <span class="hljs-literal">null</span>,
+      errors: [],
+      query: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  created () {
+    API.get(<span class="hljs-string">&apos;forecast&apos;</span>, {
+      params: {
+          id: <span class="hljs-keyword">this</span>.$route.params.cityId
+      }
+    })
+    .then(response =&gt; {
+      <span class="hljs-keyword">this</span>.weatherData = response.data
+    })
+    .catch(error =&gt; {
+      <span class="hljs-keyword">this</span>.errors.push(error)
+    });
+  },
+  filters: {
+    formatDate: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">timestamp</span>)</span>{
+      <span class="hljs-keyword">let</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(timestamp * <span class="hljs-number">1000</span>);
+      <span class="hljs-keyword">const</span> months = [<span class="hljs-string">&apos;January&apos;</span>, <span class="hljs-string">&apos;February&apos;</span>, <span class="hljs-string">&apos;March&apos;</span>, <span class="hljs-string">&apos;April&apos;</span>, <span class="hljs-string">&apos;May&apos;</span>, <span class="hljs-string">&apos;June&apos;</span>, <span class="hljs-string">&apos;July&apos;</span>, <span class="hljs-string">&apos;August&apos;</span>, <span class="hljs-string">&apos;September&apos;</span>, <span class="hljs-string">&apos;October&apos;</span>, <span class="hljs-string">&apos;November&apos;</span>, <span class="hljs-string">&apos;December&apos;</span>];
+      <span class="hljs-keyword">const</span> weekdays = [<span class="hljs-string">&apos;Sunday&apos;</span>, <span class="hljs-string">&apos;Monday&apos;</span>, <span class="hljs-string">&apos;Tuesday&apos;</span>, <span class="hljs-string">&apos;Wednesday&apos;</span>, <span class="hljs-string">&apos;Thursday&apos;</span>, <span class="hljs-string">&apos;Friday&apos;</span>, <span class="hljs-string">&apos;Saturday&apos;</span>];
+      <span class="hljs-keyword">let</span> daynum = date.getDate();
+      <span class="hljs-keyword">let</span> month = date.getMonth();
+
+      <span class="hljs-keyword">let</span> hour = date.getHours();
+      <span class="hljs-keyword">if</span> (hour === <span class="hljs-number">12</span>) {
+        hour = <span class="hljs-string">&apos;Noon&apos;</span>;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (hour === <span class="hljs-number">0</span>) {
+        hour = <span class="hljs-string">&apos;Midnight&apos;</span>;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (hour &gt; <span class="hljs-number">12</span>) {
+        hour = hour - <span class="hljs-number">12</span> + <span class="hljs-string">&apos;PM&apos;</span>;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (hour &lt; <span class="hljs-number">12</span>) {
+        hour = hour + <span class="hljs-string">&apos;AM&apos;</span>;
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${ months[month] }</span> <span class="hljs-subst">${ daynum }</span> @ <span class="hljs-subst">${ hour }</span>`</span>;
+    }
+  },
+  components: {
+    <span class="hljs-string">&apos;weather-summary&apos;</span>: WeatherSummary,
+    <span class="hljs-string">&apos;weather-conditions&apos;</span>: WeatherConditions,
+    <span class="hljs-string">&apos;error-list&apos;</span>: ErrorList
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#e8e8e8</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span>;
+}
+
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#42b983</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><strong><code>WeatherSummary.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;weatherSummary in weatherData&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;weatherSummary&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">v-bind:src</span>=<span class="hljs-string">&quot;&apos;http://openweathermap.org/img/w/&apos; + weatherSummary.icon + &apos;.png&apos;&quot;</span> <span class="hljs-attr">v-bind:alt</span>=<span class="hljs-string">&quot;weatherSummary.main&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{ weatherSummary.main }}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;WeatherSummary&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    weatherData: {}
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.weatherSummary</span> {
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><strong><code>WeatherConditions.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;conditions.temp != conditions.temp_min&quot;</span>&gt;</span>Current Temperature<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;conditions.temp != conditions.temp_min&quot;</span>&gt;</span>{{ conditions.temp }}%<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Humidity<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.humidity }}%<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>High<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.temp_max }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Low<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>{{ conditions.temp_min }}&amp;deg;F<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;WeatherConditions&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    conditions: {}
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-tag">dl</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8e8e8</span>;
+  }
+  <span class="hljs-selector-tag">dt</span> {
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">clear</span>: left;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;
+    <span class="hljs-attribute">text-align</span>: right;
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">color</span>: blue;
+  }
+  <span class="hljs-selector-tag">dd</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">130px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0.5em</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-tag">dt</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;:&quot;</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p><strong><code>ErrorList.vue</code></strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;errorList.length &gt; 0&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>There was an error fetching data.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;error in errorList&quot;</span>&gt;</span>{{ error }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;ErrorList&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+
+    }
+  },
+  props: {
+    errorList: []
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.errors</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">border</span>: solid red <span class="hljs-number">1px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>There are also a couple of small clean-up tasks that should be completed as part of the steps above, but those have been left out of this summary of file changes to keep this section shorter.</p>
+<h3 id="base-api-configuration">Base API Configuration</h3>
+<p>The contents of <code>src/common/api.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> API = axios.create({
+  baseURL: <span class="hljs-string">`//api.openweathermap.org/data/2.5/`</span>
+})
+API.interceptors.request.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-comment">// Set APPID on each request</span>
+    config.params.APPID = <span class="hljs-string">&apos;d9947bfbe4d5f42fa39c0d5e08ff915f&apos;</span>;
+    config.params.units = <span class="hljs-string">&apos;imperial&apos;</span>;
+    <span class="hljs-keyword">return</span> config;
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-comment">// Do something with request error</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+  });
+</code></pre>
+<h2 id="build-and-deploy">Build and Deploy</h2>
+<p>Once we&apos;ve finished our work, we can build and deploy the project. This project has been configured to build to the <code>docs/</code> directory, so we can follow the same pattern we used before:</p>
+<ol>
+<li>Execute the <code>npm run build</code> command to build the files into the <code>docs/</code> directory.</li>
+<li>Commit all of our code.</li>
+<li>Push the code up to GitHub.</li>
+<li>Go into the repository settings and set the GH Pages section to publish from the <code>docs/</code> directory.</li>
+</ol>
+<p>The project should now be up and available to the public through GH Pages.</p>
+<h2 id="stretch-goals">Stretch Goals</h2>
+<p>Stretch goals are provided to gain extra practice and a higher degree of challenge. If this work has been straightforward, then we are encouraged to keep pushing. There are several more opportunities to improve the organization and structure of this project, so feel free to keep honing it until it is as lean and mean as possible.</p>
+<ul>
+<li>Abstract the addition of the <code>&amp;deg; F</code> formatting on temperatures to a filter used in a common file.</li>
+<li>Abstract the <code>formatDate</code> filter to a common file.</li>
+<li>Create a child component to provide navigation between city search, current weather, and forecast views. Implement this component on each URL.</li>
+</ul>
+<p>There may be other opportunities to improve this codebase that are not listed here. Feel free to explore and experiment with ways of rearranging the features in this application to get a better idea of what can be accomplished through refactoring.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="quiz-application-architecture.html" class="navigation navigation-prev " aria-label="Previous page: Quiz: Application Architecture">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../visual-feedback/" class="navigation navigation-next " aria-label="Next page: Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Project: Application Architecture","level":"11.7","depth":1,"next":{"title":"Introduction","level":"12.1","depth":1,"path":"visual-feedback/README.md","ref":"visual-feedback/README.md","articles":[]},"previous":{"title":"Quiz: Application Architecture","level":"11.6","depth":1,"path":"application-architecture/quiz-application-architecture.md","ref":"application-architecture/quiz-application-architecture.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","quiz","youtube","responsive-iframes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"Check my answers","showExplanation":"Explain","showCorrect":"Show all","explanationHeader":"Explanation"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"responsive-iframes":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"by Shawn Rider":"http://shawnrider.com"}},"gitbook":"3.x.x"},"file":{"path":"application-architecture/project-application-architecture.md","mtime":"2018-03-10T12:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-10T12:11:19.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-responsive-iframes/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

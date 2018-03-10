@@ -1,8 +1,0 @@
-# Visual Feedback and Enhancement
-We have explored a lot of concepts about building web applications, but we have not focused serious attention on the visual presentation of our work. All of the good things we already know about building website or application interfaces applies to building projects with Vue.js. The framework gives us great tools for creating visual effects that can enhance the user experience.
-
-This is not unique or unusual. Many frameworks use similar approaches for allowing developers to react to changes in data, user actions, and other events in the interface. Frameworks often provide methods to use shorthand for toggling specific classes or automate management of specific style classes to allow the animation of new or deleted data. In this section, we will review these concepts as they are broadly defined across many frameworks, and we will look more specifically at how to use these techniques in our own Vue.js projects.
-
-Building the base functionality is often the first step in creating a website or application that provides a value to users. But we can never rely on our first or basic implementation to do the full job. It's always essential to think about the ways that we can support users throughout whatever process we have defined. We often do this with messaging and alerts, but we also accomplish this through animations to call attention to information changes on the screen and intelligent organization of the interface.
-
-Now that we have some idea of how to build the basic features we need for a project, let's spend some time working on making it a more pleasant experience for our users to use our creations.

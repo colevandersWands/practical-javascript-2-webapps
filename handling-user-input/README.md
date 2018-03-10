@@ -1,9 +1,0 @@
-# Handling User Input
-
-In most websites or applications the system relies on input from the user. At a base level, we can classify the clicks and hovers a user makes as input: We often detect and respond to these actions in order to provide a responsive and engaging interface. However, sites and applications often need to gather some information from the user as structured data. To accomplish this, we generally use the many form-based tools that HTML makes available.
-
-Within HTML we have a few key elements that allow us to gather input from the user. [The `<form>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) defines a form within an HTML document. Forms contain "fields", which are input elements the user can use to submit data.  [The `<input>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) defines a wide variety of data input interfaces. The somewhat oddball [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) and [`<select>` tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) round out the set of default form interfaces supplied in standard HTML.
-
-For the most part, we can accomplish the goal of collecting input from the user with these default form elements. When necessary, we can create custom input elements, or entirely custom interfaces for submitting data to the system. If our use cases get too exotic, we can always build our own mechanisms to handle those requirements. 
-
-It's important for web developers to become familiar with the way that forms work and to be able to leverage the abilities of forms to accomplish their goals. Forms are a fundamental part of the web, and even when they don't appear in the default style, they are behind almost all instances of user input.

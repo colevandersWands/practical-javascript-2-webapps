@@ -1,0 +1,1671 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Core Concept: Software Architecture · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-responsive-iframes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="evolving-approaches-to-web-application-development.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://shawnrider.com" target="_blank" class="custom-link">by Shawn Rider</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Welcome to the Book</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites-and-assumptions.html">
+            
+                <a href="../prerequisites-and-assumptions.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Prerequisites and Assumptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">How We Build Web Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="core-concept-software-architecture.html">
+            
+                <a href="core-concept-software-architecture.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Core Concept: Software Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="evolving-approaches-to-web-application-development.html">
+            
+                <a href="evolving-approaches-to-web-application-development.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Evolving Approaches to Web Application Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="popular-frontend-frameworks.html">
+            
+                <a href="popular-frontend-frameworks.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Popular Single Page Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="overview-of-web-applications-landscape.html">
+            
+                <a href="overview-of-web-applications-landscape.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="quiz-how-we-build-web-applications.html">
+            
+                <a href="quiz-how-we-build-web-applications.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Quiz: How We Build Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Setting Up the Workspace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../setting-up-workspace/">
+            
+                <a href="../setting-up-workspace/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../setting-up-workspace/core-concept-development-environments.html">
+            
+                <a href="../setting-up-workspace/core-concept-development-environments.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Core Concept: Development Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../setting-up-workspace/what-is-nodejs.html">
+            
+                <a href="../setting-up-workspace/what-is-nodejs.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Development Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../setting-up-workspace/installing-nodejs.html">
+            
+                <a href="../setting-up-workspace/installing-nodejs.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Installing Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../setting-up-workspace/installing-git.html">
+            
+                <a href="../setting-up-workspace/installing-git.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    Installing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setting-up-workspace/notes-for-windows-users.html">
+            
+                <a href="../setting-up-workspace/notes-for-windows-users.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    Notes for Windows Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                <a href="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    Quiz: Setting Up the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                <a href="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    Project: Testing the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bootstrapping a New App</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../bootstrap-new-app/">
+            
+                <a href="../bootstrap-new-app/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                <a href="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Core Concept: Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                <a href="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Creating a new Vue.js App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                <a href="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Getting to Know Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                <a href="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Quiz: Bootstrapping a New App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                <a href="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Project: Bootstrap an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging the App</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../debug-app/">
+            
+                <a href="../debug-app/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../debug-app/core-concept-debugging-techniques.html">
+            
+                <a href="../debug-app/core-concept-debugging-techniques.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Core Concept: Debugging Techniques
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../debug-app/using-vue-devtools.html">
+            
+                <a href="../debug-app/using-vue-devtools.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Using Vue Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../debug-app/quiz-debugging-the-app.html">
+            
+                <a href="../debug-app/quiz-debugging-the-app.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    Quiz: Debugging the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../debug-app/project-practice-debugging.html">
+            
+                <a href="../debug-app/project-practice-debugging.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Project: Practice Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploying the App</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../deploy-app/">
+            
+                <a href="../deploy-app/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../deploy-app/core-concept-deployment-tooling.html">
+            
+                <a href="../deploy-app/core-concept-deployment-tooling.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Core Concept: Deployment Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../deploy-app/configuring-deployment.html">
+            
+                <a href="../deploy-app/configuring-deployment.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    Configuring Deployment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../deploy-app/building-and-deploying-the-app.html">
+            
+                <a href="../deploy-app/building-and-deploying-the-app.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Building and Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../deploy-app/quiz-deploying-the-app.html">
+            
+                <a href="../deploy-app/quiz-deploying-the-app.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    Quiz: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../deploy-app/project-deploying-the-app.html">
+            
+                <a href="../deploy-app/project-deploying-the-app.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    Project: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Working with Templates</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../working-with-templates/">
+            
+                <a href="../working-with-templates/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                <a href="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Core Concept: Template Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../working-with-templates/using-data-in-templates.html">
+            
+                <a href="../working-with-templates/using-data-in-templates.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Using Data in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../working-with-templates/conditionals-in-templates.html">
+            
+                <a href="../working-with-templates/conditionals-in-templates.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Conditionals in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../working-with-templates/looping-in-templates.html">
+            
+                <a href="../working-with-templates/looping-in-templates.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Looping in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../working-with-templates/computed-values.html">
+            
+                <a href="../working-with-templates/computed-values.html">
+            
+                    
+                        <b>7.6.</b>
+                    
+                    Computed Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../working-with-templates/quiz-working-with-templates.html">
+            
+                <a href="../working-with-templates/quiz-working-with-templates.html">
+            
+                    
+                        <b>7.7.</b>
+                    
+                    Quiz: Working with Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../working-with-templates/project-templating-data-output.html">
+            
+                <a href="../working-with-templates/project-templating-data-output.html">
+            
+                    
+                        <b>7.8.</b>
+                    
+                    Project: Templating Data Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Handling User Input</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../handling-user-input/">
+            
+                <a href="../handling-user-input/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../handling-user-input/core-concept-user-input.html">
+            
+                <a href="../handling-user-input/core-concept-user-input.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Core Concept: Forms and User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../handling-user-input/using-forms-in-vuejs.html">
+            
+                <a href="../handling-user-input/using-forms-in-vuejs.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Using Forms in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../handling-user-input/handling-events-in-vuejs.html">
+            
+                <a href="../handling-user-input/handling-events-in-vuejs.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    Handling Events in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../handling-user-input/quiz-handling-user-input.html">
+            
+                <a href="../handling-user-input/quiz-handling-user-input.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    Quiz: Handling User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                <a href="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                    
+                        <b>8.6.</b>
+                    
+                    Project: Responding to User Input Part One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Routing and URLs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../routing-urls/">
+            
+                <a href="../routing-urls/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../routing-urls/core-concept-routing-and-urls.html">
+            
+                <a href="../routing-urls/core-concept-routing-and-urls.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Core Concept: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../routing-urls/setting-up-vue-router.html">
+            
+                <a href="../routing-urls/setting-up-vue-router.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    Setting Up vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                <a href="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                    
+                        <b>9.4.</b>
+                    
+                    Creating New Locations in the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../routing-urls/building-navigation.html">
+            
+                <a href="../routing-urls/building-navigation.html">
+            
+                    
+                        <b>9.5.</b>
+                    
+                    Building Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../routing-urls/quiz-routing-and-urls.html">
+            
+                <a href="../routing-urls/quiz-routing-and-urls.html">
+            
+                    
+                        <b>9.6.</b>
+                    
+                    Quiz: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                <a href="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                    
+                        <b>9.7.</b>
+                    
+                    Project: Responding to User Input Part Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using API Data</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../using-api-data/">
+            
+                <a href="../using-api-data/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                <a href="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Core Concept: API Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../using-api-data/exploring-apis.html">
+            
+                <a href="../using-api-data/exploring-apis.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Exploring APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../using-api-data/requesting-data-from-an-api.html">
+            
+                <a href="../using-api-data/requesting-data-from-an-api.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    Requesting Data from an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../using-api-data/quiz-using-api-data.html">
+            
+                <a href="../using-api-data/quiz-using-api-data.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Quiz: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../using-api-data/project-using-api-data.html">
+            
+                <a href="../using-api-data/project-using-api-data.html">
+            
+                    
+                        <b>10.6.</b>
+                    
+                    Project: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Application Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../application-architecture/">
+            
+                <a href="../application-architecture/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                <a href="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                    
+                        <b>11.2.</b>
+                    
+                    Core Concept: Separation of Concerns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../application-architecture/tips-for-refactoring.html">
+            
+                <a href="../application-architecture/tips-for-refactoring.html">
+            
+                    
+                        <b>11.3.</b>
+                    
+                    Tips for Refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../application-architecture/composing-components.html">
+            
+                <a href="../application-architecture/composing-components.html">
+            
+                    
+                        <b>11.4.</b>
+                    
+                    Composing Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                <a href="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                    
+                        <b>11.5.</b>
+                    
+                    Organizing Data and Configuration Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="../application-architecture/quiz-application-architecture.html">
+            
+                <a href="../application-architecture/quiz-application-architecture.html">
+            
+                    
+                        <b>11.6.</b>
+                    
+                    Quiz: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="../application-architecture/project-application-architecture.html">
+            
+                <a href="../application-architecture/project-application-architecture.html">
+            
+                    
+                        <b>11.7.</b>
+                    
+                    Project: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Visual Feedback and Enhancement</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../visual-feedback/">
+            
+                <a href="../visual-feedback/">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../visual-feedback/core-concept-visual-feedback.html">
+            
+                <a href="../visual-feedback/core-concept-visual-feedback.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    Core Concept: Visual Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../visual-feedback/dynamic-classes.html">
+            
+                <a href="../visual-feedback/dynamic-classes.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    Dynamic Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../visual-feedback/transitions-and-animations.html">
+            
+                <a href="../visual-feedback/transitions-and-animations.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    Transitions and Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="../visual-feedback/messaging.html">
+            
+                <a href="../visual-feedback/messaging.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    Messaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    Quiz: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    Project: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Caching Data</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../caching-data/">
+            
+                <a href="../caching-data/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                <a href="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Core Concept: Methods of Storing Frontend Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../caching-data/saving-user-generated-data.html">
+            
+                <a href="../caching-data/saving-user-generated-data.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Saving User-Generated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../caching-data/caching-data-from-apis.html">
+            
+                <a href="../caching-data/caching-data-from-apis.html">
+            
+                    
+                        <b>13.4.</b>
+                    
+                    Caching Data from APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="../caching-data/quiz-caching-data.html">
+            
+                <a href="../caching-data/quiz-caching-data.html">
+            
+                    
+                        <b>13.5.</b>
+                    
+                    Quiz: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="../caching-data/project-caching-data.html">
+            
+                <a href="../caching-data/project-caching-data.html">
+            
+                    
+                        <b>13.6.</b>
+                    
+                    Project: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../conclusion.html">
+            
+                <a href="../conclusion.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendices</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../appendices/appendix-a-resources.html">
+            
+                <a href="../appendices/appendix-a-resources.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Appendix A: Additional Resources for Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../appendices/appendix-b-api-suggestions.html">
+            
+                <a href="../appendices/appendix-b-api-suggestions.html">
+            
+                    
+                        <b>16.2.</b>
+                    
+                    Appendix B: API Suggestions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Core Concept: Software Architecture</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="core-concept-software-architecture">Core Concept: Software Architecture</h1>
+<p>In software, the notion of &quot;architecture&quot; refers to the big-picture description of how the software is put together. This is a metaphor borrowed from other types of engineering, and we are probably more familiar with the term &quot;architecture&quot; as it relates to buildings. </p>
+<p>When a building is designed, the architect comes up with all the parts of the building. It needs doors, foyers, rooms, hallways, stairways, and more. It&apos;s the architecture of the building that determines where all the features of the building are located and how they interact.</p>
+<p>Similarly, <a href="../GLOSSARY.html#software-architecture" class="glossary-term" title="According to Wikipedia: Software architecture is &quot;the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures.&quot;">software architecture</a> is about identifying the core pieces of the software and how those pieces will go together. For websites and web-based applications, this architecture includes the application that runs the site, the databases that store data, and the related components (such as load balancers or message queues) that allow the site to function. </p>
+<p><a href="../GLOSSARY.html#software-architecture" class="glossary-term" title="According to Wikipedia: Software architecture is &quot;the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures.&quot;">Software architecture</a> is something that we can drill down into. We can talk about architecture at a site-wide level (the server, the database, the network), or we can talk about architecture at a simple component or app level (the parts of the app that handle different functions).</p>
+<p>Throughout most of this book, we will discuss the architecture of a web application: What parts are involved in making the functionality we desire? But before we get into the specifics of an application, it&apos;s useful to look at how websites are architected at a broader level. </p>
+<p>The summary <a href="https://en.wikipedia.org/wiki/Software_architecture" target="_blank">definition of software architecture from Wikipedia</a> is a good one: <a href="../GLOSSARY.html#software-architecture" class="glossary-term" title="According to Wikipedia: Software architecture is &quot;the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures.&quot;">Software architecture</a> is &quot;the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures.&quot; When we think of this in relation to building websites, we often talk about &quot;<a href="../GLOSSARY.html#website-architecture" class="glossary-term" title="When considering the way a website is built and functions, we often use the term &quot;website architecture&quot; to describe the way these structures go together.">website architecture</a>.&quot;</p>
+<h2 id="types-of-website-architectures">Types of Website Architectures</h2>
+<p>There are many ways to build a website or webapp. For convenience, we will group architectures into three major styles of <a href="../GLOSSARY.html#website-architecture" class="glossary-term" title="When considering the way a website is built and functions, we often use the term &quot;website architecture&quot; to describe the way these structures go together.">website architecture</a>.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto; height: auto; width: 90%;" src="../img/static_website_architecture.png" alt="static_website_architecture.png"></p>
+
+<h3 id="static-website-architecture">Static Website Architecture</h3>
+<p>In the simplest terms, a website can be a collection of files that do not change when people access them. These could be files of all types, including documents (such as html, xml, or docx files), media files (such as video, audio and images), or any other digital file. A web server can allow access to a hierarchy of files and directories and can serve up whatever media the user requests. Typically, a web server displays the &quot;index.html&quot; file in any given directory the user requests, which allows for the &quot;index&quot; files to serve as &quot;homepages&quot; for the content.</p>
+<p>This form of website is simple and limited in terms of dynamic qualities we have come to expect (like favoriting or commenting on content). However, it is the primary use case the web was designed for: Serving content that can be referenced by a single, authoritative location (the URL). Serving static media works well with all of the different caching and performance mechanisms of the web, too, so static content tends to get to users quickly and reliably.</p>
+<p>In fact, serving static content is so popular that there are several solutions, such as Jekyll and Pelican, that allow for content to be rendered to a static form for deployment to a static media server (such as Github Pages). Other services, which can be used via Javascript on the client side, may add features such as commenting or favoriting via the use of a third-party API.</p>
+<p>Even in this modern era of web development, static media websites are more vibrant than ever, and there is more than can be done with them than ever before. They have also remained popular with a large group of web developers, which has insured a vibrant community.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto; width: 90%; height: auto;" src="../img/dynamic-site.png" alt="Dynamic Website Architecture.png"></p>
+
+<h3 id="dynamic-website-architecture">Dynamic Website Architecture</h3>
+<p>Most modern websites react to the user in some persistent way. By default, the web is &quot;stateless&quot;--web servers, for example, do not remember previous requests you made. They respond only to the data sent in the current request. However, we have become used to websites that allow us to login and customize content, save our favorites, share with friends, or comment on what we see. All of these features, and many others, require the addition of several functions that are not supplied by the web server, such as databases, logical processing of code, etc.</p>
+<p>We call the websites that allow you to create an account and have some kind of customized experience &quot;dynamic websites&quot;. They are websites that change per user and they typically store information about the user and what she has done over time.</p>
+<p>In order to build a dynamic website it&apos;s necessary to combine several different layers:</p>
+<ul>
+<li><strong>The web server</strong> still handles receiving and sending requests from clients, but now it hands those requests off to an application that determines how to respond to the user.</li>
+<li><strong>The application</strong> is written in some <a href="../GLOSSARY.html#backend" class="glossary-term" title="Having to do with the server-side of a web-based project. Often used in phrases such as &quot;backend programming languages&quot;, which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of frontend.">backend</a> programming language (such as Python, Ruby, PHP, Java, etc.), and each application will have it&apos;s own <a href="../GLOSSARY.html#software-architecture" class="glossary-term" title="According to Wikipedia: Software architecture is &quot;the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures.&quot;">software architecture</a> it uses to parse the request and create a response.</li>
+<li><strong>The database</strong> is where the application stores persistent data such as user profiles, lists of favorites, comments on articles, etc. The application pulls data from the database in order to process the user&apos;s request.</li>
+<li><strong>The templates</strong> provide a standardized formatting for the response. They are typically processed by the application to generate files that contain HTML, CSS and Javascript, which is sent to the user in the form of an HTTP Response.</li>
+<li><strong>The static media</strong> includes all the images, supporting Javascript libraries, videos, audio and other binary files that do not get parsed by the application before being sent to the user.&#xA0;</li>
+</ul>
+
+<p>These are the basic components of a dynamic website, but keep in mind that many dynamic websites and applications have many more components. Sometimes in order to bring your unique product to the user, it may be necessary to invent a whole new component. In other situations, you might make use of additional components to help improve website performance or to facilitate entirely new kinds of features.</p>
+<p><img style="width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;" src="../img/soa.png" alt="Service Oriented Architecture.png"></p>
+
+<h3 id="service-oriented-architecture">Service-Oriented Architecture</h3>
+<p>Although dynamic websites have the great advantage of being friendly to all sorts of development, they have the tendency to become very unique to their operational environment and it tends to become difficult to leverage the valuable functions in the website and application across different platforms. As the desire has grown to support as many different platforms as possible, and as web technology has spread to all sorts of devices, it has become more and more important for us to deliver unique &quot;<a href="../GLOSSARY.html#frontend" class="glossary-term" title="Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of backend.">frontend</a>&quot; components to each client and reuse the functional &quot;<a href="../GLOSSARY.html#backend" class="glossary-term" title="Having to do with the server-side of a web-based project. Often used in phrases such as &quot;backend programming languages&quot;, which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of frontend.">backend</a>&quot; components across all the different platforms.</p>
+<p>In order to accomplish this goal, we must separate the <a href="../GLOSSARY.html#frontend" class="glossary-term" title="Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of backend.">frontend</a> component that gets delivered to the user&apos;s browser from the <a href="../GLOSSARY.html#backend" class="glossary-term" title="Having to do with the server-side of a web-based project. Often used in phrases such as &quot;backend programming languages&quot;, which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of frontend.">backend</a> component that performs the business logic of our application. The <a href="../GLOSSARY.html#backend" class="glossary-term" title="Having to do with the server-side of a web-based project. Often used in phrases such as &quot;backend programming languages&quot;, which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of frontend.">backend</a> component is turned into a &quot;service&quot; which means that rather than presenting a beautiful <a href="../GLOSSARY.html#frontend" class="glossary-term" title="Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of backend.">frontend</a> for the user, the service will present an Application Programming Interface (API) that can be leveraged by any client. APIs allow two different applications to communicate and exchange data. APIs will be discussed further on the next page, but for now the important thing to keep in mind is that the API will allow our <a href="../GLOSSARY.html#frontend" class="glossary-term" title="Having to do with the web browser. Frontend technologies include HTML, CSS, and JavaScript. The opposite of backend.">frontend</a> app to talk to our <a href="../GLOSSARY.html#backend" class="glossary-term" title="Having to do with the server-side of a web-based project. Often used in phrases such as &quot;backend programming languages&quot;, which would be languages that are executed on the server (Python, Java, Ruby, PHP, etc.). The opposite of frontend.">backend</a> service and use all the features that were previously only available to the web application in the Dynamic <a href="../GLOSSARY.html#website-architecture" class="glossary-term" title="When considering the way a website is built and functions, we often use the term &quot;website architecture&quot; to describe the way these structures go together.">Website Architecture</a>.</p>
+<p>By reconfiguring the architecture like this,we decouple the business logic and data storage parts of our application from the presentation of the software to the user. This allows, for example, a website and a native mobile app to leverage the same set of functionality via the same API. New features can be developed at the API level, and then for each individual client in a way that makes sense for the business and product. Features can also be included and excluded on a per-platform or per-device basis. A huge degree of flexibility is achieved while enhancing maintainability and extensibility.</p>
+<p>Many, if not most, large websites and webapps are currently using a Service Oriented Architecture. The complexity of these systems can vary dramatically depending on need and scale, but the core concept of isolating components into dedicated applications and then providing APIs to allow communication between the applications is a key pattern in modern web development.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="evolving-approaches-to-web-application-development.html" class="navigation navigation-next " aria-label="Next page: Evolving Approaches to Web Application Development">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Core Concept: Software Architecture","level":"2.2","depth":1,"next":{"title":"Evolving Approaches to Web Application Development","level":"2.3","depth":1,"path":"how-we-build/evolving-approaches-to-web-application-development.md","ref":"how-we-build/evolving-approaches-to-web-application-development.md","articles":[]},"previous":{"title":"Introduction","level":"2.1","depth":1,"path":"how-we-build/README.md","ref":"how-we-build/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","quiz","youtube","responsive-iframes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"Check my answers","showExplanation":"Explain","showCorrect":"Show all","explanationHeader":"Explanation"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"responsive-iframes":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"by Shawn Rider":"http://shawnrider.com"}},"gitbook":"3.x.x"},"file":{"path":"how-we-build/core-concept-software-architecture.md","mtime":"2018-03-10T12:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-10T12:11:19.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-responsive-iframes/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

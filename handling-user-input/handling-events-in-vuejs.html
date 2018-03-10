@@ -1,0 +1,1785 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Handling Events in Vue.js · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-responsive-iframes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="quiz-handling-user-input.html" />
+    
+    
+    <link rel="prev" href="using-forms-in-vuejs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://shawnrider.com" target="_blank" class="custom-link">by Shawn Rider</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Welcome to the Book</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites-and-assumptions.html">
+            
+                <a href="../prerequisites-and-assumptions.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Prerequisites and Assumptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">How We Build Web Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../how-we-build/">
+            
+                <a href="../how-we-build/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../how-we-build/core-concept-software-architecture.html">
+            
+                <a href="../how-we-build/core-concept-software-architecture.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Core Concept: Software Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                <a href="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Evolving Approaches to Web Application Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../how-we-build/popular-frontend-frameworks.html">
+            
+                <a href="../how-we-build/popular-frontend-frameworks.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Popular Single Page Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                <a href="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                <a href="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Quiz: How We Build Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Setting Up the Workspace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../setting-up-workspace/">
+            
+                <a href="../setting-up-workspace/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../setting-up-workspace/core-concept-development-environments.html">
+            
+                <a href="../setting-up-workspace/core-concept-development-environments.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Core Concept: Development Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../setting-up-workspace/what-is-nodejs.html">
+            
+                <a href="../setting-up-workspace/what-is-nodejs.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Development Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../setting-up-workspace/installing-nodejs.html">
+            
+                <a href="../setting-up-workspace/installing-nodejs.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Installing Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../setting-up-workspace/installing-git.html">
+            
+                <a href="../setting-up-workspace/installing-git.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    Installing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setting-up-workspace/notes-for-windows-users.html">
+            
+                <a href="../setting-up-workspace/notes-for-windows-users.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    Notes for Windows Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                <a href="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    Quiz: Setting Up the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                <a href="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    Project: Testing the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bootstrapping a New App</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../bootstrap-new-app/">
+            
+                <a href="../bootstrap-new-app/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                <a href="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Core Concept: Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                <a href="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Creating a new Vue.js App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                <a href="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Getting to Know Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                <a href="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Quiz: Bootstrapping a New App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                <a href="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Project: Bootstrap an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging the App</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../debug-app/">
+            
+                <a href="../debug-app/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../debug-app/core-concept-debugging-techniques.html">
+            
+                <a href="../debug-app/core-concept-debugging-techniques.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Core Concept: Debugging Techniques
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../debug-app/using-vue-devtools.html">
+            
+                <a href="../debug-app/using-vue-devtools.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Using Vue Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../debug-app/quiz-debugging-the-app.html">
+            
+                <a href="../debug-app/quiz-debugging-the-app.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    Quiz: Debugging the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../debug-app/project-practice-debugging.html">
+            
+                <a href="../debug-app/project-practice-debugging.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Project: Practice Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploying the App</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../deploy-app/">
+            
+                <a href="../deploy-app/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../deploy-app/core-concept-deployment-tooling.html">
+            
+                <a href="../deploy-app/core-concept-deployment-tooling.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Core Concept: Deployment Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../deploy-app/configuring-deployment.html">
+            
+                <a href="../deploy-app/configuring-deployment.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    Configuring Deployment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../deploy-app/building-and-deploying-the-app.html">
+            
+                <a href="../deploy-app/building-and-deploying-the-app.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Building and Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../deploy-app/quiz-deploying-the-app.html">
+            
+                <a href="../deploy-app/quiz-deploying-the-app.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    Quiz: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../deploy-app/project-deploying-the-app.html">
+            
+                <a href="../deploy-app/project-deploying-the-app.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    Project: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Working with Templates</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../working-with-templates/">
+            
+                <a href="../working-with-templates/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                <a href="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Core Concept: Template Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../working-with-templates/using-data-in-templates.html">
+            
+                <a href="../working-with-templates/using-data-in-templates.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Using Data in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../working-with-templates/conditionals-in-templates.html">
+            
+                <a href="../working-with-templates/conditionals-in-templates.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Conditionals in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../working-with-templates/looping-in-templates.html">
+            
+                <a href="../working-with-templates/looping-in-templates.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Looping in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../working-with-templates/computed-values.html">
+            
+                <a href="../working-with-templates/computed-values.html">
+            
+                    
+                        <b>7.6.</b>
+                    
+                    Computed Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../working-with-templates/quiz-working-with-templates.html">
+            
+                <a href="../working-with-templates/quiz-working-with-templates.html">
+            
+                    
+                        <b>7.7.</b>
+                    
+                    Quiz: Working with Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../working-with-templates/project-templating-data-output.html">
+            
+                <a href="../working-with-templates/project-templating-data-output.html">
+            
+                    
+                        <b>7.8.</b>
+                    
+                    Project: Templating Data Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Handling User Input</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="core-concept-user-input.html">
+            
+                <a href="core-concept-user-input.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Core Concept: Forms and User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="using-forms-in-vuejs.html">
+            
+                <a href="using-forms-in-vuejs.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Using Forms in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.4" data-path="handling-events-in-vuejs.html">
+            
+                <a href="handling-events-in-vuejs.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    Handling Events in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="quiz-handling-user-input.html">
+            
+                <a href="quiz-handling-user-input.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    Quiz: Handling User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="project-responding-to-user-input-part-one.html">
+            
+                <a href="project-responding-to-user-input-part-one.html">
+            
+                    
+                        <b>8.6.</b>
+                    
+                    Project: Responding to User Input Part One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Routing and URLs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../routing-urls/">
+            
+                <a href="../routing-urls/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../routing-urls/core-concept-routing-and-urls.html">
+            
+                <a href="../routing-urls/core-concept-routing-and-urls.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Core Concept: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../routing-urls/setting-up-vue-router.html">
+            
+                <a href="../routing-urls/setting-up-vue-router.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    Setting Up vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                <a href="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                    
+                        <b>9.4.</b>
+                    
+                    Creating New Locations in the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../routing-urls/building-navigation.html">
+            
+                <a href="../routing-urls/building-navigation.html">
+            
+                    
+                        <b>9.5.</b>
+                    
+                    Building Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../routing-urls/quiz-routing-and-urls.html">
+            
+                <a href="../routing-urls/quiz-routing-and-urls.html">
+            
+                    
+                        <b>9.6.</b>
+                    
+                    Quiz: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                <a href="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                    
+                        <b>9.7.</b>
+                    
+                    Project: Responding to User Input Part Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using API Data</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../using-api-data/">
+            
+                <a href="../using-api-data/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                <a href="../using-api-data/core-concept-using-third-party-data-apis.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Core Concept: API Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../using-api-data/exploring-apis.html">
+            
+                <a href="../using-api-data/exploring-apis.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Exploring APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../using-api-data/requesting-data-from-an-api.html">
+            
+                <a href="../using-api-data/requesting-data-from-an-api.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    Requesting Data from an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../using-api-data/quiz-using-api-data.html">
+            
+                <a href="../using-api-data/quiz-using-api-data.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Quiz: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../using-api-data/project-using-api-data.html">
+            
+                <a href="../using-api-data/project-using-api-data.html">
+            
+                    
+                        <b>10.6.</b>
+                    
+                    Project: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Application Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../application-architecture/">
+            
+                <a href="../application-architecture/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                <a href="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                    
+                        <b>11.2.</b>
+                    
+                    Core Concept: Separation of Concerns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../application-architecture/tips-for-refactoring.html">
+            
+                <a href="../application-architecture/tips-for-refactoring.html">
+            
+                    
+                        <b>11.3.</b>
+                    
+                    Tips for Refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../application-architecture/composing-components.html">
+            
+                <a href="../application-architecture/composing-components.html">
+            
+                    
+                        <b>11.4.</b>
+                    
+                    Composing Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                <a href="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                    
+                        <b>11.5.</b>
+                    
+                    Organizing Data and Configuration Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="../application-architecture/quiz-application-architecture.html">
+            
+                <a href="../application-architecture/quiz-application-architecture.html">
+            
+                    
+                        <b>11.6.</b>
+                    
+                    Quiz: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="../application-architecture/project-application-architecture.html">
+            
+                <a href="../application-architecture/project-application-architecture.html">
+            
+                    
+                        <b>11.7.</b>
+                    
+                    Project: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Visual Feedback and Enhancement</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../visual-feedback/">
+            
+                <a href="../visual-feedback/">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../visual-feedback/core-concept-visual-feedback.html">
+            
+                <a href="../visual-feedback/core-concept-visual-feedback.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    Core Concept: Visual Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../visual-feedback/dynamic-classes.html">
+            
+                <a href="../visual-feedback/dynamic-classes.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    Dynamic Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../visual-feedback/transitions-and-animations.html">
+            
+                <a href="../visual-feedback/transitions-and-animations.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    Transitions and Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="../visual-feedback/messaging.html">
+            
+                <a href="../visual-feedback/messaging.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    Messaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    Quiz: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    Project: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Caching Data</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../caching-data/">
+            
+                <a href="../caching-data/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                <a href="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Core Concept: Methods of Storing Frontend Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../caching-data/saving-user-generated-data.html">
+            
+                <a href="../caching-data/saving-user-generated-data.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Saving User-Generated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../caching-data/caching-data-from-apis.html">
+            
+                <a href="../caching-data/caching-data-from-apis.html">
+            
+                    
+                        <b>13.4.</b>
+                    
+                    Caching Data from APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="../caching-data/quiz-caching-data.html">
+            
+                <a href="../caching-data/quiz-caching-data.html">
+            
+                    
+                        <b>13.5.</b>
+                    
+                    Quiz: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="../caching-data/project-caching-data.html">
+            
+                <a href="../caching-data/project-caching-data.html">
+            
+                    
+                        <b>13.6.</b>
+                    
+                    Project: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../conclusion.html">
+            
+                <a href="../conclusion.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendices</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../appendices/appendix-a-resources.html">
+            
+                <a href="../appendices/appendix-a-resources.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Appendix A: Additional Resources for Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../appendices/appendix-b-api-suggestions.html">
+            
+                <a href="../appendices/appendix-b-api-suggestions.html">
+            
+                    
+                        <b>16.2.</b>
+                    
+                    Appendix B: API Suggestions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Handling Events in Vue.js</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="handling-events-in-vuejs">Handling Events in Vue.js</h1>
+<p>Events are a key part of any web-based application. The user interacts with a page by scrolling, clicking, hovering, touching, dragging, submitting forms, and more. All of these interactions can be captured. Responding to these events is a primary method we have for building reactive interfaces that help the user accomplish their goals.</p>
+<p>As a quick recap about what events are: Many components of HTML will emit (signal, or &quot;fire&quot;) <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">&quot;events.&quot;</a> Events are meant to provide a signal that something interesting has happened, and much of what we do in our coding is to create situations where responding to these built-in events becomes useful to the user. For example, when a button is clicked, a &quot;click&quot; event is fired. This event can be detected in our code and we can respond by doing something the user expects.</p>
+<p>Events are &quot;handled&quot; by event listeners (which we will often just call &quot;listeners&quot;). Listeners are specific watchers we have defined to detect an event and then execute some code in response to the event. Events are happening all the time when a user interacts with a website, but if no listeners have been defined then only the default event &quot;handlers&quot; will be invoked. </p>
+<p>For example, a web browser will automatically submit a form when the form emits the <code>submit</code> event. A form could be submitted by a user pressing <code>enter</code> on their keyboard, or by clicking a button to submit the form. Regardless, the browser has a default event listener watching for that signal from any HTML forms, and it will execute code to respond to an event. </p>
+<p>As developers, we can also detect events and we can choose to augment or replace the default response to any event. Vue.js provides us with a range of tools for <a href="https://vuejs.org/v2/guide/events.html" target="_blank">working with events</a>. These tools make it much easier to define, manage, and execute event handling in Vue.js projects.</p>
+<h2 id="defining-event-listeners">Defining Event Listeners</h2>
+<p>The core <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> used to define event listeners is the <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>. This <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> takes an argument, which is the name of the event for which to listen. Because each HTML element can emit a different set of events, it&apos;s best to refer to a list of relevant events (such as the <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Web Events page at MDN</a>) to know we are using the proper event label. But much of the time we use relatively standard events in our projects (e.g. <code>submit</code>, <code>click</code>, <code>keydown</code>, <code>keyup</code>, etc.). </p>
+<p>Here is an example of a simple <code>v-on:click</code> listener that increments the value of a <code>counter</code> variable in the <a href="../GLOSSARY.html#template-context" class="glossary-term" title="The &quot;context&quot; of a template refers to the set of information (Objects, Arrays, methods, etc.) that is used to process the template into the final output.">template context</a>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Counter<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;counter++&quot;</span>&gt;</span>Add 1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> {{ counter }}
+</code></pre>
+<p>All of the logic that responds to this event is in the template here. As long as <code>counter</code> is initialized to <code>0</code> in the component&apos;s data, no other logic is required in the component to make this work. When the template loaded in a browser, it looks like this:</p>
+<p><img src="../img/event-handler-click-counter.gif" alt="Simple click event handler">
+<br>Simple click event handler</p>
+<p>This is easy enough to set up, but usually we want to do something more with our event handlers. Typically, rather than executing a simple line of code when an event is detected, we execute a component method to handle the event. Component methods can be used in many ways, and they are straightforward to add to our components.</p>
+<h2 id="component-methods">Component Methods</h2>
+<p>Component methods are functions that can be executed in various ways within a Vue.js component. Much of the time, these methods will be executed in response to some event that has been triggered in the system. The <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> can define a method call that will be executed in response to an event signal. Let&apos;s look at an example:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;events&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Message: {{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;setMessage(&apos;Danger! Danger!&apos;)&quot;</span>&gt;</span>Show Danger Message.<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;setMessage(&apos;All Clear!&apos;)&quot;</span>&gt;</span>Show All Clear Message.<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;EventDemos&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      message: <span class="hljs-string">&apos;Component loaded successfully.&apos;</span>
+    }
+  },
+  methods: {
+    setMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">text</span>) </span>{
+      <span class="hljs-keyword">this</span>.message = text
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>In this example, there is only one variable revealed to the template: <code>message</code>. The message is initialized to a load statement, but the user can click a button to change the message. Each button has a <code>click</code> event listener defined using the <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>. When the <code>click</code> event is detected on one of the buttons it will execute the <code>setMessage</code> method. This method is a function that expects to receive some text to change the value of the <code>message</code> variable. In this example, the text is set by hand, but this text could also be provided by referencing another variable or data point.</p>
+<p>Here is what this code looks like when displayed to the user:</p>
+<p><img src="../img/event-handler-method1.gif" alt="Event handler using component method">
+<br>Event handler using component method</p>
+<p>We can see that when the user clicks the buttons the message is changed instantly. This demonstrates the fundamental ability to use methods to respond to events. With this tool, we can make all sorts of things happen in our interfaces.</p>
+<h2 id="preventing-default-event-handling">Preventing Default Event Handling</h2>
+<p>Although we can now respond to events, there are situations when we will find ourselves fighting against the default event handling provided by the web browser. Vue.js provides us with several modifiers we can use alongside the <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> to prevent the default actions from taking place. We should keep the following modifiers in mind as we work through trickier event handling situations.</p>
+<h3 id="prevent"><code>.prevent</code></h3>
+<p>The <code>.prevent</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> will prevent the default event handlers from executing when an event is triggered. This is most commonly used to prevent form submissions. If no <code>action</code> property is supplied on a <code>&lt;form&gt;</code> element, the browser will still refresh the page. That refresh could be enough to really interrupt our well-planned user experience. Luckily, it&apos;s easy to prevent the default form submit event from happening thanks to <code>.prevent</code>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;forms&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Message: {{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">&quot;handleMyForm&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>New Message: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;newMessage&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;FormsPractice&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      message: <span class="hljs-string">&apos;Submit the form to change this text.&apos;</span>,
+      newMessage: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  methods: {
+    handleMyForm: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">this</span>.message = <span class="hljs-keyword">this</span>.newMessage
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Rather than directly binding the <code>message</code> value to the form input, this example uses a component method to handle the form submission. The method is called <code>handleMyForm</code> and it changes the value of the <code>message</code> variable. Note the use of <code>.prevent</code> on the <code>&lt;form&gt;</code> element&apos;s event listener: This is used to prevent the browser from refreshing to submit the form. </p>
+<p>Here is what this example looks like to the user:</p>
+<p><img src="../img/event-handler-prevent.gif" alt="Using .prevent on a form">
+<br>Using .prevent on a form</p>
+<h3 id="stop"><code>.stop</code></h3>
+<p>In some situations there could be multiple event handlers that could be triggered when we perform a single action. It&apos;s common for HTML elements and their parent or child elements to each have events defined, and in those cases the event &quot;bubbles&quot; up the <a href="../GLOSSARY.html#dom" class="glossary-term" title="The Document Object Model (DOM) is the JavaScript representation of the HTML structure and status in the browser software.">DOM</a> from child to parent to grandparent and beyond. This could lead to multiple event handlers being executed in quick succession when a single event is triggered.</p>
+<p>In order to stop the bubbling of events through the <a href="../GLOSSARY.html#dom" class="glossary-term" title="The Document Object Model (DOM) is the JavaScript representation of the HTML structure and status in the browser software.">DOM</a>, JavaScript has a <code>stopPropagation</code> method that we use. In Vue.js, we can simply apply the <code>.stop</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> to a <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>. This will stop the bubbling of the event through the <a href="../GLOSSARY.html#dom" class="glossary-term" title="The Document Object Model (DOM) is the JavaScript representation of the HTML structure and status in the browser software.">DOM</a> and prevent any other event handlers from firing. Here is an example of how this looks:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop</span>=<span class="hljs-string">&quot;handleMyClick&quot;</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p><strong>Note:</strong> This is different from <code>.prevent</code>, which only prevents the <em>default</em> event handlers from firing. The <code>.stop</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> will stop all other events handlers from being executed. It is sometimes desirable to both stop the event from propagating through the <a href="../GLOSSARY.html#dom" class="glossary-term" title="The Document Object Model (DOM) is the JavaScript representation of the HTML structure and status in the browser software.">DOM</a> and to prevent the default event handlers from executing. Luckily, <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> modifiers can be chained in Vue.js:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click.stop.prevent</span>=<span class="hljs-string">&quot;handleMyClick&quot;</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>It&apos;s important to keep in mind that chained modifiers are possible with any <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a>, and that they are executed in the order they are chained. The order of chaining modifiers can dramatically alter their effect, so we must pay close attention to our ordering of modifiers.</p>
+<h3 id="once"><code>.once</code></h3>
+<p>It is possible that we have an event we only wish to trigger once. For example, submitting a payment form should only be done once, but it&apos;s common for users to double-click the submit button or click submit a second time after they wait for a moment. We might use the <code>.once</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> to prevent that behavior:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent.once</span>=<span class="hljs-string">&quot;handleMyForm&quot;</span>&gt;</span>
+</code></pre>
+<p>We can see that we can also chain the <code>.once</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> with the <code>.prevent</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> to fully handle the form with our custom component method.</p>
+<p>There are additional modifiers available, but these are the most commonly used. Refer to <a href="https://vuejs.org/v2/guide/events.html" target="_blank">the Vue.js Events Guide</a> for more details about modifiers.</p>
+<h2 id="detecting-keyboard-input">Detecting Keyboard Input</h2>
+<p>Keyboard events are helpful for building an interface that is both efficient for users prefer keyboard navigation and accessible to users who are forced to use keyboard navigation. Adding hotkeys, keyboard shortcuts, and general navigational support via keyboard can be a great enhancement to any user experience. Detecting keyboard and device events is straightforward with Vue.js.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">events associated with keyboards</a> are: </p>
+<ul>
+<li><code>keydown</code> &#x2014; When the key is first pressed down by the user.</li>
+<li><code>keypress</code> &#x2014; If the key is not a <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> (<code>alt</code>, <code>opt</code>, <code>ctrl</code>, <code>cmd</code>, etc.), this event is fired.</li>
+<li><code>keyup</code> &#x2014; When the key is released by the user.</li>
+</ul>
+<p>Users are accustomed to these events being used in different ways. The <code>keydown</code> event is somewhat &quot;instrumental&quot;: We expect to hear a sound when we press the key down on the piano, for example. This is also how we expect game controls to work much of the time. The <code>keypress</code> event is often used to filter out <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> keys, which is helpful for page shortcuts, and this is the way we expect keyboard combinations to work. The <code>keyup</code> is the event that we most associate with single-key keyboard commands: A command executes when we release the key, not when we first press it. It&apos;s worthwhile to experiment with these different events to get a better feel for how keyboard interfaces work.</p>
+<h3 id="responding-to-specific-keys">Responding to Specific Keys</h3>
+<p>We often do not want to just randomly respond to every keyboard event. Usually, we want to set specific events  for specific keys or key combinations. Keyboard events include a <code>keyCode</code> that can be used to identify the key being pressed. We can find the <code>keyCode</code> for any key using a tool like <a href="http://keycode.info/" target="_blank">keycode.info</a>.</p>
+<p>Luckily, Vue.js provides quite a few aliases for these codes that make it easier to define an event listener for a specific key. For example, if we wanted our users to submit a form by pressing the <code>enter</code> key, we could use this <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:keyup.enter</span>=<span class="hljs-string">&quot;handleMyForm&quot;</span> <span class="hljs-attr">v-on:submit.prevent</span>&gt;</span>
+</code></pre>
+<p>In this example, the user would be able to either click a <code>submit</code> button or press the <code>enter</code> key to submit the form. In both cases, the form will be handled by the <code>handleMyForm</code> component method. (Also note that we can have multiple event listeners defined on a single element.)</p>
+<p>Here is the full list of <code>keyCode</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> aliases provided by Vue.js:</p>
+<ul>
+<li>.enter</li>
+<li>.tab</li>
+<li>.delete (captures both &#x201C;Delete&#x201D; and &#x201C;Backspace&#x201D; keys)</li>
+<li>.esc</li>
+<li>.space</li>
+<li>.up</li>
+<li>.down</li>
+<li>.left</li>
+<li>.right</li>
+</ul>
+<p>If the key we need to respond to is not in this list of <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> aliases, we can still refer to it by the numeric code:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:keyup.78</span>=<span class="hljs-string">&quot;createNewItem&quot;</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>In this example, we have mapped the key <code>78</code> (which corresponds to the <code>n</code> key) to a component method that will create a new item. We can pair this reference to a <code>keyCode</code> with a <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> key using one of the modifiers listed here:</p>
+<ul>
+<li>.ctrl</li>
+<li>.alt</li>
+<li>.shift</li>
+<li>.meta</li>
+</ul>
+<p>We often pair keyboard shortcuts with <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> keys such as <code>ctrl</code> or <code>alt</code>. It has become increasingly common to let users do more significant actions by pressing <code>shift + enter</code>, too. We could accomplish a feature like that with a simple <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:keypress.shift.enter</span>=<span class="hljs-string">&quot;handleMyForm&quot;</span>&gt;</span>
+</code></pre>
+<p>In this example we have used the combination of <code>shift</code> and <code>enter</code> to handle the form submission. We could apply other keyboard shortcuts in more conventional ways, too. Here is a new item shortcut that uses the <code>ctrl + n</code> keyboard combination:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:keypress.ctrl.78</span>=<span class="hljs-string">&quot;createNewItem&quot;</span>&gt;</span>New<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>With all of the tools Vue.js gives us for handling keyboard input, it&apos;s incredibly easy to add keyboard navigation and robust keyboard features to our websites and applications. This can help us present better, more accessible experiences to our users.</p>
+<h2 id="v-on-shorthand"><code>v-on</code> Shorthand</h2>
+<p>If we get sick of writing <code>v-on:click</code>, we can alter our templates to use the shorthand version: <code>@click</code>. Here is an example of what one of our previous templates would look like using the shorthand.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;events&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Message: {{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;setMessage(&apos;Danger! Danger!&apos;)&quot;</span>&gt;</span>Show Danger Message.<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;setMessage(&apos;All Clear!&apos;)&quot;</span>&gt;</span>Show All Clear Message.<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="using-forms-in-vuejs.html" class="navigation navigation-prev " aria-label="Previous page: Using Forms in Vue.js">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="quiz-handling-user-input.html" class="navigation navigation-next " aria-label="Next page: Quiz: Handling User Input">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Handling Events in Vue.js","level":"8.4","depth":1,"next":{"title":"Quiz: Handling User Input","level":"8.5","depth":1,"path":"handling-user-input/quiz-handling-user-input.md","ref":"handling-user-input/quiz-handling-user-input.md","articles":[]},"previous":{"title":"Using Forms in Vue.js","level":"8.3","depth":1,"path":"handling-user-input/using-forms-in-vuejs.md","ref":"handling-user-input/using-forms-in-vuejs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","quiz","youtube","responsive-iframes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"Check my answers","showExplanation":"Explain","showCorrect":"Show all","explanationHeader":"Explanation"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"responsive-iframes":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"by Shawn Rider":"http://shawnrider.com"}},"gitbook":"3.x.x"},"file":{"path":"handling-user-input/handling-events-in-vuejs.md","mtime":"2018-03-10T12:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-10T12:11:19.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-responsive-iframes/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

@@ -1,7 +1,0 @@
-# Deploying the Application
-
-As we write code, and once we're ready to "release" our application, it's crucial to deploy our code to a production server for testing and observation. This accomplishes several goals: It allows us to share our work with others; it lets us make sure everything works when it is compiled and sent to the server; it lets us to collaborate with more colleagues to test and improve the application.
-
-There are many ways to deploy an application. We could move files to a location using a manual tool like SCP or SFTP. We could use a version control software to clone a repository or branch to a specific location. There are complex build and deployment systems that require us to write custom scripts. We could package our code up into containers and use various container management tools to get our code to the users.
-
-In the end, which deployment strategy is correct for our project will depend on our team, our requirements, and our resources. There is no one solution that will work for everyone and every project. In this section we will explore some concepts behind deploying applications, what happens when we build and deploy our webapps, and how we can actually get the projects from this book up and online for the public to access.

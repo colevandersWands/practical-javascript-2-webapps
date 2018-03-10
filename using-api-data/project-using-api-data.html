@@ -1,0 +1,1938 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Project: Using API Data · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-quiz/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-responsive-iframes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../application-architecture/" />
+    
+    
+    <link rel="prev" href="quiz-using-api-data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://shawnrider.com" target="_blank" class="custom-link">by Shawn Rider</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Welcome to the Book</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites-and-assumptions.html">
+            
+                <a href="../prerequisites-and-assumptions.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Prerequisites and Assumptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">How We Build Web Applications</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../how-we-build/">
+            
+                <a href="../how-we-build/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../how-we-build/core-concept-software-architecture.html">
+            
+                <a href="../how-we-build/core-concept-software-architecture.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Core Concept: Software Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                <a href="../how-we-build/evolving-approaches-to-web-application-development.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Evolving Approaches to Web Application Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../how-we-build/popular-frontend-frameworks.html">
+            
+                <a href="../how-we-build/popular-frontend-frameworks.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Popular Single Page Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                <a href="../how-we-build/overview-of-web-applications-landscape.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                <a href="../how-we-build/quiz-how-we-build-web-applications.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Quiz: How We Build Web Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Setting Up the Workspace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../setting-up-workspace/">
+            
+                <a href="../setting-up-workspace/">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../setting-up-workspace/core-concept-development-environments.html">
+            
+                <a href="../setting-up-workspace/core-concept-development-environments.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Core Concept: Development Environments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../setting-up-workspace/what-is-nodejs.html">
+            
+                <a href="../setting-up-workspace/what-is-nodejs.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Development Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../setting-up-workspace/installing-nodejs.html">
+            
+                <a href="../setting-up-workspace/installing-nodejs.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Installing Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../setting-up-workspace/installing-git.html">
+            
+                <a href="../setting-up-workspace/installing-git.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    Installing Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../setting-up-workspace/notes-for-windows-users.html">
+            
+                <a href="../setting-up-workspace/notes-for-windows-users.html">
+            
+                    
+                        <b>3.6.</b>
+                    
+                    Notes for Windows Users
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                <a href="../setting-up-workspace/quiz-setting-up-the-workspace.html">
+            
+                    
+                        <b>3.7.</b>
+                    
+                    Quiz: Setting Up the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                <a href="../setting-up-workspace/project-testing-the-workspace.html">
+            
+                    
+                        <b>3.8.</b>
+                    
+                    Project: Testing the Workspace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bootstrapping a New App</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../bootstrap-new-app/">
+            
+                <a href="../bootstrap-new-app/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                <a href="../bootstrap-new-app/core-concept-application-frameworks.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Core Concept: Application Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                <a href="../bootstrap-new-app/creating-a-new-vuejs-app.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Creating a new Vue.js App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                <a href="../bootstrap-new-app/getting-to-know-vue.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Getting to Know Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                <a href="../bootstrap-new-app/quiz-bootstrapping-a-new-app.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Quiz: Bootstrapping a New App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                <a href="../bootstrap-new-app/project-bootstrap-an-app.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    Project: Bootstrap an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging the App</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../debug-app/">
+            
+                <a href="../debug-app/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../debug-app/core-concept-debugging-techniques.html">
+            
+                <a href="../debug-app/core-concept-debugging-techniques.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Core Concept: Debugging Techniques
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../debug-app/using-vue-devtools.html">
+            
+                <a href="../debug-app/using-vue-devtools.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    Using Vue Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../debug-app/quiz-debugging-the-app.html">
+            
+                <a href="../debug-app/quiz-debugging-the-app.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    Quiz: Debugging the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../debug-app/project-practice-debugging.html">
+            
+                <a href="../debug-app/project-practice-debugging.html">
+            
+                    
+                        <b>5.5.</b>
+                    
+                    Project: Practice Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploying the App</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../deploy-app/">
+            
+                <a href="../deploy-app/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../deploy-app/core-concept-deployment-tooling.html">
+            
+                <a href="../deploy-app/core-concept-deployment-tooling.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    Core Concept: Deployment Tooling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../deploy-app/configuring-deployment.html">
+            
+                <a href="../deploy-app/configuring-deployment.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    Configuring Deployment 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../deploy-app/building-and-deploying-the-app.html">
+            
+                <a href="../deploy-app/building-and-deploying-the-app.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    Building and Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../deploy-app/quiz-deploying-the-app.html">
+            
+                <a href="../deploy-app/quiz-deploying-the-app.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    Quiz: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../deploy-app/project-deploying-the-app.html">
+            
+                <a href="../deploy-app/project-deploying-the-app.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    Project: Deploying the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Working with Templates</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../working-with-templates/">
+            
+                <a href="../working-with-templates/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                <a href="../working-with-templates/core-concept-template-fundamentals.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Core Concept: Template Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../working-with-templates/using-data-in-templates.html">
+            
+                <a href="../working-with-templates/using-data-in-templates.html">
+            
+                    
+                        <b>7.3.</b>
+                    
+                    Using Data in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../working-with-templates/conditionals-in-templates.html">
+            
+                <a href="../working-with-templates/conditionals-in-templates.html">
+            
+                    
+                        <b>7.4.</b>
+                    
+                    Conditionals in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../working-with-templates/looping-in-templates.html">
+            
+                <a href="../working-with-templates/looping-in-templates.html">
+            
+                    
+                        <b>7.5.</b>
+                    
+                    Looping in Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../working-with-templates/computed-values.html">
+            
+                <a href="../working-with-templates/computed-values.html">
+            
+                    
+                        <b>7.6.</b>
+                    
+                    Computed Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../working-with-templates/quiz-working-with-templates.html">
+            
+                <a href="../working-with-templates/quiz-working-with-templates.html">
+            
+                    
+                        <b>7.7.</b>
+                    
+                    Quiz: Working with Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../working-with-templates/project-templating-data-output.html">
+            
+                <a href="../working-with-templates/project-templating-data-output.html">
+            
+                    
+                        <b>7.8.</b>
+                    
+                    Project: Templating Data Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Handling User Input</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../handling-user-input/">
+            
+                <a href="../handling-user-input/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../handling-user-input/core-concept-user-input.html">
+            
+                <a href="../handling-user-input/core-concept-user-input.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Core Concept: Forms and User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../handling-user-input/using-forms-in-vuejs.html">
+            
+                <a href="../handling-user-input/using-forms-in-vuejs.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Using Forms in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../handling-user-input/handling-events-in-vuejs.html">
+            
+                <a href="../handling-user-input/handling-events-in-vuejs.html">
+            
+                    
+                        <b>8.4.</b>
+                    
+                    Handling Events in Vue.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../handling-user-input/quiz-handling-user-input.html">
+            
+                <a href="../handling-user-input/quiz-handling-user-input.html">
+            
+                    
+                        <b>8.5.</b>
+                    
+                    Quiz: Handling User Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                <a href="../handling-user-input/project-responding-to-user-input-part-one.html">
+            
+                    
+                        <b>8.6.</b>
+                    
+                    Project: Responding to User Input Part One
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Routing and URLs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../routing-urls/">
+            
+                <a href="../routing-urls/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../routing-urls/core-concept-routing-and-urls.html">
+            
+                <a href="../routing-urls/core-concept-routing-and-urls.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Core Concept: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../routing-urls/setting-up-vue-router.html">
+            
+                <a href="../routing-urls/setting-up-vue-router.html">
+            
+                    
+                        <b>9.3.</b>
+                    
+                    Setting Up vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                <a href="../routing-urls/creating-new-locations-in-the-app.html">
+            
+                    
+                        <b>9.4.</b>
+                    
+                    Creating New Locations in the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../routing-urls/building-navigation.html">
+            
+                <a href="../routing-urls/building-navigation.html">
+            
+                    
+                        <b>9.5.</b>
+                    
+                    Building Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../routing-urls/quiz-routing-and-urls.html">
+            
+                <a href="../routing-urls/quiz-routing-and-urls.html">
+            
+                    
+                        <b>9.6.</b>
+                    
+                    Quiz: Routing and URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                <a href="../routing-urls/project-responding-to-user-input-part-two.html">
+            
+                    
+                        <b>9.7.</b>
+                    
+                    Project: Responding to User Input Part Two
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using API Data</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="core-concept-using-third-party-data-apis.html">
+            
+                <a href="core-concept-using-third-party-data-apis.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Core Concept: API Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="exploring-apis.html">
+            
+                <a href="exploring-apis.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    Exploring APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="requesting-data-from-an-api.html">
+            
+                <a href="requesting-data-from-an-api.html">
+            
+                    
+                        <b>10.4.</b>
+                    
+                    Requesting Data from an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="quiz-using-api-data.html">
+            
+                <a href="quiz-using-api-data.html">
+            
+                    
+                        <b>10.5.</b>
+                    
+                    Quiz: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.6" data-path="project-using-api-data.html">
+            
+                <a href="project-using-api-data.html">
+            
+                    
+                        <b>10.6.</b>
+                    
+                    Project: Using API Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Application Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../application-architecture/">
+            
+                <a href="../application-architecture/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                <a href="../application-architecture/core-concept-separation-of-concerns.html">
+            
+                    
+                        <b>11.2.</b>
+                    
+                    Core Concept: Separation of Concerns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../application-architecture/tips-for-refactoring.html">
+            
+                <a href="../application-architecture/tips-for-refactoring.html">
+            
+                    
+                        <b>11.3.</b>
+                    
+                    Tips for Refactoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../application-architecture/composing-components.html">
+            
+                <a href="../application-architecture/composing-components.html">
+            
+                    
+                        <b>11.4.</b>
+                    
+                    Composing Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                <a href="../application-architecture/organizing-data-and-configuration-code.html">
+            
+                    
+                        <b>11.5.</b>
+                    
+                    Organizing Data and Configuration Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="../application-architecture/quiz-application-architecture.html">
+            
+                <a href="../application-architecture/quiz-application-architecture.html">
+            
+                    
+                        <b>11.6.</b>
+                    
+                    Quiz: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.7" data-path="../application-architecture/project-application-architecture.html">
+            
+                <a href="../application-architecture/project-application-architecture.html">
+            
+                    
+                        <b>11.7.</b>
+                    
+                    Project: Application Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Visual Feedback and Enhancement</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../visual-feedback/">
+            
+                <a href="../visual-feedback/">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../visual-feedback/core-concept-visual-feedback.html">
+            
+                <a href="../visual-feedback/core-concept-visual-feedback.html">
+            
+                    
+                        <b>12.2.</b>
+                    
+                    Core Concept: Visual Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../visual-feedback/dynamic-classes.html">
+            
+                <a href="../visual-feedback/dynamic-classes.html">
+            
+                    
+                        <b>12.3.</b>
+                    
+                    Dynamic Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../visual-feedback/transitions-and-animations.html">
+            
+                <a href="../visual-feedback/transitions-and-animations.html">
+            
+                    
+                        <b>12.4.</b>
+                    
+                    Transitions and Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="../visual-feedback/messaging.html">
+            
+                <a href="../visual-feedback/messaging.html">
+            
+                    
+                        <b>12.5.</b>
+                    
+                    Messaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/quiz-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.6.</b>
+                    
+                    Quiz: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                <a href="../visual-feedback/project-visual-feedback-and-enhancement.html">
+            
+                    
+                        <b>12.7.</b>
+                    
+                    Project: Visual Feedback and Enhancement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Caching Data</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../caching-data/">
+            
+                <a href="../caching-data/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                <a href="../caching-data/core-concept-methods-of-storing-user-data.html">
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Core Concept: Methods of Storing Frontend Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../caching-data/saving-user-generated-data.html">
+            
+                <a href="../caching-data/saving-user-generated-data.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Saving User-Generated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../caching-data/caching-data-from-apis.html">
+            
+                <a href="../caching-data/caching-data-from-apis.html">
+            
+                    
+                        <b>13.4.</b>
+                    
+                    Caching Data from APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="../caching-data/quiz-caching-data.html">
+            
+                <a href="../caching-data/quiz-caching-data.html">
+            
+                    
+                        <b>13.5.</b>
+                    
+                    Quiz: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="../caching-data/project-caching-data.html">
+            
+                <a href="../caching-data/project-caching-data.html">
+            
+                    
+                        <b>13.6.</b>
+                    
+                    Project: Caching Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../conclusion.html">
+            
+                <a href="../conclusion.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendices</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../appendices/appendix-a-resources.html">
+            
+                <a href="../appendices/appendix-a-resources.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Appendix A: Additional Resources for Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../appendices/appendix-b-api-suggestions.html">
+            
+                <a href="../appendices/appendix-b-api-suggestions.html">
+            
+                    
+                        <b>16.2.</b>
+                    
+                    Appendix B: API Suggestions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Project: Using API Data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="project-using-api-data">Project: Using API Data</h1>
+<p>In this project, we will use the <a href="https://github.com/suwebdev/wats4000-using-apis" target="_blank">Using APIs</a> repository as our starting point. This project asks us to create a rhyming thesaurus using the <a href="http://www.datamuse.com/api/" target="_blank">Datamuse API</a>. The Datamuse API is a wonderful tool that allows us to do all sorts of interesting look-ups to find suggested words. In this project, we will be looking for words that rhyme with one word (or phrase), but which also have some relation to another word (or phrase): a rhyming thesaurus. This is a tool that could be incredibly useful for poets, songwriters, battle rappers, and many others.</p>
+<p><strong>Please note:</strong> There are many features in the Datamuse API that can be used to create other types of applications ranging from avant garde algorithmic poetry to pragmatic, helpful writing tools. Feel free to explore the many possibilities of this free and open API.</p>
+<h2 id="review-the-requirements">Review the Requirements</h2>
+<p>This project requires us to make an API call when the user clicks a search button. We want to take some input from the user, which we will use to form our API request. First, we will walk through tasks outlined in the <code>Rhymesaurus.vue</code> file, which guides us toward creating the rhyming thesaurus interface. Then, we are asked to create a brand new Vue.js component that makes use of a different API call to the Datamuse API. Our goal is to link together the Rhymesaurus and our new tool within our site so users can access whichever they need.</p>
+<p>Here are the Basic Requirements from the project&apos;s <code>README.md</code> file:</p>
+<p><strong><code>/src/components/Rhymesaurus.vue</code></strong></p>
+<p><code>&lt;template&gt;</code></p>
+<ul>
+<li>Set up an event handler to trigger the <code>findWords</code> method when the <code>form</code> is submitted</li>
+<li>Use a conditional to control the display of the <code>ul.results</code> element so it only displays when results are ready to be shown</li>
+<li>Use a loop to process all of the results into list items<ul>
+<li>Output the word in each list item</li>
+<li>Output the score for each word in each list item</li>
+</ul>
+</li>
+<li>Use a conditional to control the display of the <code>.no-results</code> message, which should only show when the user has attempted a search and no words have been found</li>
+<li>Use a conditional to control the display of the <code>ul.errors</code> element so it only displays when there are errors ready to be shown</li>
+<li>Use a loop to process all of the errors and display them for the user</li>
+</ul>
+<p><code>&lt;script&gt;</code></p>
+<ul>
+<li>Import axios for use in the component logic</li>
+<li>Create a method called <code>findWords</code> (don&apos;t neglect to add the <code>methods</code> attribute to this component)</li>
+<li>Within the <code>findWords</code> method, create an <code>axios.get()</code> statement that will make a request to <code>https://api.datamuse.com/words</code><ul>
+<li>Define the <code>params</code> for <code>ml</code> (which should map to the <code>phrase</code>) and <code>rel_rhy</code> (which should map to the <code>rhyme</code>)</li>
+<li>Define a <code>then</code> clause that sets the component&apos;s <code>results</code> value to the value of <code>response.data</code></li>
+<li>Define a <code>catch</code> clause that will add any error to the <code>errors</code> array in the component</li>
+</ul>
+</li>
+</ul>
+<p><strong><code>/src/components/NewComponent.vue</code></strong></p>
+<p>(Please do not actually name the new component <code>NewComponent.vue</code>. This name is only being used for reference here. Name the component according to whatever feature it provides.)</p>
+<ul>
+<li>Create a new component (use the boilerplate component code, or copy the component you just created)</li>
+<li>Refer to the Datamuse API documentation to determine a way to modify your code to provide an alternative way to find words (e.g. &quot;sounds like&quot;, &quot;related to&quot;, &quot;adjectives that go with a word&quot;, &quot;words that often follow a word&quot;, etc.).</li>
+<li>Implement a similar interface to perform this new search<ul>
+<li>Create the necessary template to allow the user to enter at least one search parameter</li>
+<li>Create the necessary method to handle the form submission and API request</li>
+</ul>
+</li>
+<li>Implement the proper template elements to output the results to the user<ul>
+<li>Show all relevant results returned by the API</li>
+<li>Show all errors to the user</li>
+<li>Show a message when no results have been found, so the user knows the system is working even though the data is not there</li>
+</ul>
+</li>
+</ul>
+<p><strong><code>/src/router/index.js</code></strong></p>
+<ul>
+<li>Add the new component to the import statements in the <a href="../GLOSSARY.html#router" class="glossary-term" title="The component of an application that determines what view the user should see based on the URL they request.">router</a> definitions file</li>
+<li>Add the new route to the <a href="../GLOSSARY.html#router" class="glossary-term" title="The component of an application that determines what view the user should see based on the URL they request.">router</a> definitions list (use a sensible URL and name for it)</li>
+</ul>
+<p><strong>both <code>/src/compnents/Rhymesaurus.vue</code> and <code>/src/components/NewComponent.vue</code></strong></p>
+<ul>
+<li>Add navigation elements to provide links between the two search pages</li>
+<li>Use proper <code>router-link</code> tags to create links</li>
+<li>Allow the user to easily switch between the two pages in the application.</li>
+</ul>
+<h2 id="working-the-project">Working the Project</h2>
+<p>For this project walkthrough, we will focus on the initial work to complete the rhyming thesaurus. After we finish that work, we will offer some guidance to putting together the new component, but that will primarily be left as a challenge to complete based on understanding from previous sections and projects. Refer back to how we previously created new components and set up new route definitions in the <a href="../routing-urls/project-responding-to-user-input-part-two.html">Responding to User Input</a> project.</p>
+<h3 id="set-up-the-api-request">Set Up the API Request</h3>
+<p>Rather than jumping immediately into the template work, it&apos;s probably more streamlined for us to write the API request so we can test it as we build out our template features. The first <code>TODO</code> in the <code>&lt;script&gt;</code> area of the <code>Rhymesaurus.vue</code> component asks us to import <code>axios</code> for use in our <code>findWords</code> method. Assuming we have installed <code>axios</code> in the project with the standard <code>npm install --save axios</code> command, this import statement should work:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+</code></pre>
+<p>That makes the <code>axios</code> object available within our component logic, so we can then write the <code>findWords</code> method. To add the <code>findWords</code> method, we must create the <code>methods</code> property on the component object. Then, we can define <code>findWords</code> like so:</p>
+<pre><code class="lang-js">methods: {
+  findWords: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    axios.get(<span class="hljs-string">&apos;https://api.datamuse.com/words&apos;</span>, {
+      params: {
+        ml: <span class="hljs-keyword">this</span>.phrase,
+        rel_rhy: <span class="hljs-keyword">this</span>.rhyme
+      }
+    })
+    .then(response =&gt; {
+      <span class="hljs-keyword">this</span>.results = response.data;
+    })
+    .catch(error =&gt; {
+      <span class="hljs-keyword">this</span>.errors.push(error);
+    });
+  }
+}
+</code></pre>
+<p>As we can see, <code>findWords</code> is a fairly simple method that uses <code>axios</code> to make a call to the Datamuse API. The request to the API is formed around the <code>ml</code> and <code>rel_rhy</code> parameters. These two parameters are explained in the <a href="http://www.datamuse.com/api/" target="_blank">Datamuse API Documentation</a> (keep that link handy because we&apos;ll refer to it later on, when we build our new component). The <code>ml</code> parameter indicates &quot;means like&quot;, which returns synonyms for words and phrases. The <code>rel_rhy</code> parameter attempts to find words that rhyme with the supplied words. By combining these parameters we can find words or phrases that are synonymous with <code>this.phrase</code> and which also rhyme with <code>this.rhyme</code>. </p>
+<p>Notice that in addition to the URL for the API request, we have also supplied a configuration object in the <code>axios.get()</code> call. This configuration object only specifies <code>params</code> at the moment, but if we needed we could specify other types of configuration options (e.g. <code>headers</code>, <code>transformResponse</code> functions, etc.). It&apos;s critical that the <code>params</code> property names match the parameter names used by whatever API we are calling (in this case, the Datamuse API). Refer to the API documentation for the specific names an API uses and then use those in the <code>params</code> object when setting up <code>axios</code> requests.</p>
+<p>This is an example of the kind of unorthodox tool we can build by using discrete features of an API. There are plenty of tools and books to look up rhymes for words (we call them  &quot;rhyming dictionaries&quot;). And there are tools and books to look up synonymous words (we call that a &quot;thesaurus&quot;). But what we are creating here is a &quot;rhyming thesaurus&quot; (or &quot;Rhymesaurus&quot;), which is a much more unusual type of tool. It&apos;s also the kind of cross-lookup that would be difficult to replicate in print, making it especially suitable for building as a software application.</p>
+<p>If we are using Postman (which we should be using) to test our API queries, we can try something like this:</p>
+<pre><code class="lang-html">https://api.datamuse.com/words?ml=test&amp;rel_rhy=ham
+</code></pre>
+<p>This API request should return words that are synonymous with &quot;test&quot; and also rhyme with &quot;ham&quot;. The list should include &quot;exam&quot; and variations on that word. If we test that query in Postman, we can see the results we hope for:</p>
+<p><img src="../img/project10-postman1.png" alt="API Results in Postman">
+<br>API Results in Postman</p>
+<p>Now that we have verified our API results using Postman, and we have set up our API call using <code>axios</code>, we can continue to edit the template.</p>
+<h3 id="rhymesaurus-form">Rhymesaurus Form</h3>
+<p>In the template we primarily need to set up the input form and then the output of the results and any potential errors. We also want to let our user know if the API request completed successfully, but no words were found. (If we don&apos;t let our user know that no words were found, then they are almost guaranteed to perceive that case as a breakage in our software.)</p>
+<p>To do this, we must first set up the event listener to handle the form submission event. This follows the same pattern we used in the previous project:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">&quot;findWords&quot;</span>&gt;</span>
+</code></pre>
+<p>Again, we are using the <code>v-on</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a>, and we specify the <code>submit</code> event. We use the <code>.prevent</code> <a href="../GLOSSARY.html#modifier" class="glossary-term" title="An extra command that can be appended to a directive to alter its behavior. For example, the .prevent modifier can be used with the v-on directive to &quot;prevent defaults&quot; on event handlers.">modifier</a> to prevent all of the default event handlers from executing. Finally, we specify the <code>findWords</code> method to handle the form submission event. Whenever the form is submitted, <code>findWords</code> will be executed.</p>
+<p>Once we have set up the form submission handler, we must connect our form fields to our component data. As with the previous project, we will use the <code>v-model</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> to do that:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Find rhymes for <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;rhyme&quot;</span>&gt;</span> related to <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;phrase&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>There is not much special about this implementation. We reference the <code>rhyme</code> and <code>phrase</code> values in the data object. It&apos;s important to remember that these values must be initialized in the content data object in order to be used in the template like this.</p>
+<div class="tip-box">
+  <h3 id="to-form-or-not-to-form">To Form or Not to Form</h3>
+  <p>It is possible to use HTML input fields and buttons to simulate a form experience using only a <code>v-on:click</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> on the button. This can work, but it only works when the button is clicked. By using the form, and tracking the form submission event instead of the button click event, we leverage the default behavior of forms in the web browser to allow users to press the <code>Enter/Return</code> button to submit the form. This is a nice enhancement that works better for users who prefer keyboard navigation of a website (often either users with accessibility needs or power users who want greater efficiency). Where possible, it&apos;s usually better to use a fully defined form to handle user-submitted data.</p>
+</div>
+
+<p>Now that we have the form wired up to the proper component data values and the proper form submission handler, we can test our page in the browser. When we click search, we will not see any results (because we haven&apos;t written that part yet) but we will see the XHR request made by Axios in the devtools console:</p>
+<p><img src="../img/project10-xhr-console.png" alt="XHR Request in Devtools Console">
+<br>XHR Request in Devtools Console</p>
+<p>We can also see the information in the Vue Devtools tab. After we have made the request we can see that the <code>results</code> value is populated as an Array with 3 items:</p>
+<p><img src="../img/project10-vuedevtools-test.png" alt="Vue Devtools Results">
+<br>Vue Devtools Results</p>
+<p>Now we can set up the output of this information for the user to view.</p>
+<h3 id="data-output-in-template">Data Output in Template</h3>
+<p>To output the data, we will create a list of items. The list will use the <code>.results</code> class to label it and control styling. We will make a loop using the <code>v-for</code> <a href="../GLOSSARY.html#directive" class="glossary-term" title="A function used in a template to invoke some special behavior (e.g. setting an event listener, invoking a loop, or creating a conditional) used to process the template. Custom directives may be created by developers, and frameworks often provide a selection of default directives.">directive</a> on each of the list items. In the end, it will look like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;results &amp;&amp; results.length &gt; 0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;results&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item of results&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{item.word}}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{item.score}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>We want to hide the list until we have results. We also want to hide the list if we have zero results returned from the API. We can notice that <code>results</code> is initialized to <code>null</code>, which means that until the user triggers a form submission event the results will not show. Once the <code>findWords</code> function is executed, <code>results</code> will be an Array. If it has any items in it (if <code>results.length</code> is greater than <code>0</code>), then the <code>.results</code> list will be shown.</p>
+<p>On the <code>li</code> element, we have created a <code>v-for</code> loop. We are using the somewhat generic term <code>item</code> to label each item in the <code>results</code> array as they are processed through the loop iterations. Each <code>item</code> is an object with <code>word</code> and <code>score</code> values (we can see all of the properties on each item returned by the API in Postman when we inspect our API call). We output the values of those properties for the user to view.</p>
+<p>Once we have this template code in place, we can run a test and we should see the results.</p>
+<p><img src="../img/project10-test-ham.png" alt="Testing the Data Output">
+<br>Testing the Data Output</p>
+<h3 id="handling-no-data">Handling No Data</h3>
+<p>Sometimes the user will search for a rhyme and synonym that does not exist. In these cases, the API will return zero results. If we do not let the user know that the API returned zero results, then they are likely to believe our software is not working correctly. It&apos;s crucial to provide this message so the user can have a much better experience and understand that they should adjust their search to get better results.</p>
+<p>To accomplish this, we will use a <code>v-else-if</code> statement to control the display of a message that tells the user to adjust their search parameters. This is what it looks like:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;results &amp;&amp; results.length==0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;no-results&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>No Words Found<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Please adjust your search to find more words.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Notice that in this conditional, we are once again checking to see that <code>results</code> exists. We do not want to show an error message right away when a user hits our page. We only want to show the error message if the <code>results</code> array has been created and if the length of the <code>results</code> array is zero. Once we&apos;ve set this up, we can do a search that will not produce any results:</p>
+<p><img src="../img/project10-orangetaxes.png" alt="Orange and Taxes: No results">
+<br>Orange and Taxes: No results</p>
+<p>In this example, we search for words that rhyme with <code>orange</code> and are related to <code>taxes</code>. There are &quot;No Words Found,&quot; which makes perfect sense.</p>
+<h3 id="handling-errors">Handling Errors</h3>
+<p>We handle the display of error conditions in much the same way that we handle the display of results and the &quot;no words&quot; message: We will create a conditional to see if the <code>error</code> value contains at least one error.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;errors.length &gt; 0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;error of errors&quot;</span>&gt;</span>
+    {{error.message}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>The conditional here is almost identical to the conditional we used to control the display of the <code>.results</code> list. We can test this display by forcing an error in our API request. The easiest way to do that is to alter the first line of our <code>axios</code> command:</p>
+<pre><code class="lang-js">axios.get(<span class="hljs-string">&apos;https://api.dataTESTmuse.com/words&apos;</span>, {
+</code></pre>
+<p>By inserting the word <code>TEST</code> into the domain name, we will trigger a domain error (because that domain does not exist). This comes across to the user like so:</p>
+<p><img src="../img/project10-error.png" alt="Network Error">
+<br>Network Error</p>
+<p>We could also try to adjust our URL to trigger other errors within the API (e.g. 404 errors, 500 errors, etc.). Each of these errors should be displayed to the user with a somewhat helpful label. Although the error message might not allow the user to solve the problem, it at least indicates that something has gone wrong beyond their control.</p>
+<h3 id="creating-the-new-component">Creating the New Component</h3>
+<p>The remaining project requirements ask us to create a new component that will allow us to create a different kind of word-finding tool. This new component can essentially use the same setup as the <code>Rhymesaurus.vue</code>, and it would not be bad to start by simply copying the existing component file with a new name. To change the behavior, we only need to update the form, the data bindings, and the API call that is being formed in our <code>axios</code> call.</p>
+<p>Once we have created the new component, we are asked to link these two pages together using a standard <a href="../GLOSSARY.html#router" class="glossary-term" title="The component of an application that determines what view the user should see based on the URL they request.">router</a> definition and the <code>&lt;router-link&gt;</code> element. Building this little navigation should be very similar to setting up routes and links in the previous project. Refer back to those pages for additional instruction.</p>
+<p>The toughest part of creating the new component is deciding on which features of the <a href="http://www.datamuse.com/api/" target="_blank">Datamuse API</a> to combine. There are many possibilities, and we are encouraged to explore them to find something interesting to work with. If we&apos;re feeling uninspired, here are some ideas along with the URLs to make the API calls.</p>
+<ul>
+<li><code>https://api.datamuse.com/words?rel_jjb=car</code> &#x2014; Find adjectives for a given noun</li>
+<li><code>https://api.datamuse.com/words?rel_jjb=car&amp;rel_rhy=ham</code> &#x2014; Find adjectives for a given noun that rhyme with another word</li>
+<li><code>https://api.datamuse.com/words?rel_bgb=statue</code> &#x2014; Find words that frequently precede the given word</li>
+<li><code>https://api.datamuse.com/words?rel_bga=statue</code> &#x2014; Find words that frequently follow the given word</li>
+</ul>
+<p>There are many other lookups available on the Datamuse API that can be combined to create interesting tools. Try out queries in Postman to get a feel for what sort of results can be achieved.</p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>The final <code>Rhymesaurus.vue</code> file looks like this when we&apos;re done (excluding the links to the new component):</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;rhymesaurus&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">v-on:submit.prevent</span>=<span class="hljs-string">&quot;findWords&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Find rhymes for <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;rhyme&quot;</span>&gt;</span> related to <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;phrase&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;results &amp;&amp; results.length &gt; 0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;results&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item of results&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>{{item.word}}<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{item.score}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;results &amp;&amp; results.length==0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;no-results&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>No Words Found<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Please adjust your search to find more words.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;errors &amp;&amp; errors.length &gt; 0&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;errors&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;error of errors&quot;</span>&gt;</span>
+        {{error.message}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  name: <span class="hljs-string">&apos;Rhymesaurus&apos;</span>,
+  data () {
+    <span class="hljs-keyword">return</span> {
+      results: <span class="hljs-literal">null</span>,
+      errors: [],
+      phrase: <span class="hljs-string">&apos;&apos;</span>,
+      rhyme: <span class="hljs-string">&apos;&apos;</span>
+    }
+  },
+  methods: {
+    findWords: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      axios.get(<span class="hljs-string">&apos;https://api.datamuse.com/words&apos;</span>, {
+        params: {
+          ml: <span class="hljs-keyword">this</span>.phrase,
+          rel_rhy: <span class="hljs-keyword">this</span>.rhyme
+        }
+      })
+      .then(response =&gt; {
+        <span class="hljs-keyword">this</span>.results = response.data;
+      })
+      .catch(error =&gt; {
+        <span class="hljs-keyword">this</span>.errors.push(error);
+      });
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.rhymesaurus</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+}
+
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type=&quot;text&quot;]</span>{
+  <span class="hljs-attribute">border-top</span>: none;
+  <span class="hljs-attribute">border-left</span>: none;
+  <span class="hljs-attribute">border-right</span>: none;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#2c3e50</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(0,0,0,0.02);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+}
+<span class="hljs-selector-tag">button</span>{
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+}
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
+
+<span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.results</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.results</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(0,0,0,0.7);
+}
+<span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.errors</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+}
+<span class="hljs-selector-class">.errors</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid red;
+  <span class="hljs-attribute">color</span>: red;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5rem</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#42b983</span>;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>The additional requirements ask us to create a new file in <code>/src/components/</code> for the new component and to add a new route to the <code>/src/router/index.js</code> file. These changes are up to us to work out according to our unique vision.</p>
+<h2 id="build-and-deploy">Build and Deploy</h2>
+<p>Once we&apos;ve finished our work, we can build and deploy the project. This project has been configured to build to the <code>docs/</code> directory, so we can follow the same pattern we used before:</p>
+<ol>
+<li>Execute the <code>npm run build</code> command to build the files into the <code>docs/</code> directory.</li>
+<li>Commit all of our code.</li>
+<li>Push the code up to GitHub.</li>
+<li>Go into the repository settings and set the GH Pages section to publish from the <code>docs/</code> directory.</li>
+</ol>
+<p>The project should now be up and available to the public through GH Pages.</p>
+<h2 id="stretch-goals">Stretch Goals</h2>
+<p>There are many more fun things we can do with this project. The <code>README.md</code> file lists several possible stretch goals:</p>
+<ul>
+<li>Create a similar application using a different API. (<a href="https://shawnr.gitbooks.io/practical-javascript-2-building-applications/appendices/appendix-b-api-suggestions.html" target="_blank">Find suggested APIs for experimenting with here</a>.)</li>
+<li>Add a second API to this application and mingle the results in some interesting way</li>
+<li>Use the &quot;score&quot; data from the API to modify the visual presentation of the words to indicate which ones are the best matches for the user&apos;s search parameters</li>
+<li>Use the data returned from the API to modify the appearance or interface in some other way</li>
+</ul>
+<p>There are many other ways we could push this forward. Feel free to explore and experiment with the many other features of the Datamuse API and all the things we can build with it.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="quiz-using-api-data.html" class="navigation navigation-prev " aria-label="Previous page: Quiz: Using API Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../application-architecture/" class="navigation navigation-next " aria-label="Next page: Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Project: Using API Data","level":"10.6","depth":1,"next":{"title":"Introduction","level":"11.1","depth":1,"path":"application-architecture/README.md","ref":"application-architecture/README.md","articles":[]},"previous":{"title":"Quiz: Using API Data","level":"10.5","depth":1,"path":"using-api-data/quiz-using-api-data.md","ref":"using-api-data/quiz-using-api-data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","quiz","youtube","responsive-iframes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"Check my answers","showExplanation":"Explain","showCorrect":"Show all","explanationHeader":"Explanation"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"responsive-iframes":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"by Shawn Rider":"http://shawnrider.com"}},"gitbook":"3.x.x"},"file":{"path":"using-api-data/project-using-api-data.md","mtime":"2018-03-10T12:10:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-10T12:11:19.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-quiz/script.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-responsive-iframes/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+
